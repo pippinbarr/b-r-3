@@ -14,6 +14,40 @@ In putting in the first water so I had something to work with (from [Everything 
 
 Remaining questions revolve around the building structure itself, which I'd like to reference the original game. I'd like to start outside it and have the player walk in ideally, and thus to have a surrounding landscape. I'd like to create the sense of being inside when you're in it, too, but I'm not sure how plausible that is in terms of having walls/windows etc. I'd love to somehow project light from the windows over the floor, but that will almost certainly conflict really badly with the water itself.
 
-Probably the immediate solution is to import a couple more waters for variety, then set up the building stuff, then get the result of the waters. By the standards of the original game I need 3x8 which is 24 which is... a ton. When I looked through Lorenzo Pilia's list of games as a place to start I only found two easily (just by looking at their icon). But we'll see. There's a ton of Bitsy games out there.
+Probably the immediate solution is to import a couple more waters for variety, then set up the building stuff, then get the result of the waters. By the standards of the original game I need 3x8 which is 24 which is... a ton. When I looked through [Lorenzo Pilia's list of games](https://itch.io/c/201121/bitsy-faves) as a place to start I only found two easily (just by looking at their icon). But we'll see. There's a ton of Bitsy games out there.
 
 Onward and upward with the arts.
+
+---
+
+# Waters and Importing and Layouts and Palettes and Generation (Monday, 30 March 2020, 11:02AM)
+
+## Waters
+
+I've spent time going through the "bitsy" search keyword on [itch.io](itch.io), looking at any game that has water in its thumbnail or seems like it might have water. Very scientific.
+
+That's allowed me to build up a reasonably large list of games that have confirmed water I could show in this museum, which is an important step. One question is attribution and permission. At the most involved end I could try to contact ever water-maker and try to get their permission to show their water in the museum, but that would obvious delay the project by a huge amount, maybe getting it stuck forever? The easy version is simple attribution, maybe even with a link to the game in question so people can see the water in situ, which would be nice - it would turn the museum into a weird browsing experience. That's a departure from v r 3 of course, but I think it perhaps better takes into account the community involved - it's not an asset store after all.
+
+There's something fun and interesting about the diversity of waters available in 8x8 with two frames of animation - hardly surprising though I suppose. There are 2^(8*8) possible configurations of pixels in a single frame, and you can raise that to the two again, I suppose, to get the total number of two frame animations? Big numbers. Obviously the subset that resembles water is smaller, but you can increase it somewhat because of context (such as narrative, surrounding objects, and sound for those games that implement it).
+
+## Importing
+
+How to get the waters into the game is tough. Ideally I could access the files themselves and cut and paste the data, but that's (quite reasonably) blocked by itch.io. As such it may be a labour of love in which I have to laboriously copy each water like on of those art copiers in China? That sounds like a huge drag, but there's something kind of attractive about it as well? I'll need to develop some kind of more systematic approach so it doesn't kill me though.
+
+A little bit of tinkering lets me see I can actually get to the source of the game past itch.io's hotlink detector by putting the URL directly into the view-source address type in the browser. This would be something of a life saver given it gives you the palettes and the tiles in particular, which would make working it all out much, much easier (especially if I want to use custom palettes per water as below).
+
+So there's an ethics thing here I don't totally know how to resolve. If I ask people I can just ask for the source (or permission to access it since I can anyway), and thus know I have permission. If I don't ask, I can access it but it seems sketchy to the extent I'm bypassing something itch.io does to protect the games (although they're protecting from hotlinking which isn't what I'm doing at all). What to do? Ask Twitter?
+
+## Layouts
+
+Other than the obtaining and importing of water, the biggest challenge is probably the actual layout of rooms. I'd started with the assumption I'd represent a grid of waters, say 3x3 or so, or even something crazy like 3x8, and stick closely to the architecture of the Unity game. The biggest problem with any multi-water screen, though, is that you entirely lose the palette of the original water, and having looked at various waters, that seems like a tremendous shame as they're often beautifully curated and a major part of the water's appeal. It's also, simple, the author's voice and it should be maintained.
+
+To maintain the water you can only have one per screen which throws the original architectural layout into a shambled. You could imagine being zoomed in on a single plinth, but then the avatar is really tiny? Unless we imagine the avatar as an eye you're moving around? Could be of interest and references the FPS controls idea? However that might make the space feel totally weird and exhausting to navigate and just confusing to understand that when you look at one plinth there are others to the sides and ahead, because you have no overall spatial context.
+
+The other approach is "just" to reimagine the space altogether as being a linear series of rooms (say) that you see a large amount of water in.
+
+ANOTHER option, now that I'm thinking about it, would be a kind of index room with 24 waters in it, but all locked to one palette of course, but each of which links you to the appropriate room containing more of the water as well as the correct palette? So you get a kind of teleporting system going. But then is it trending more towards UI than being a "proper" reference to the original game?
+
+## Generation?
+
+Still, maybe it's kind of neat? Also does this staaaaart to seem like something where I should generate the Bitsy data with code instead of doing all this crap manually? Given that it's just a kind of data thing at that point?! That would be bold. But kind of incredible...
