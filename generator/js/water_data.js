@@ -14,7 +14,7 @@ const waterData = [{
   {
     title: "Everything Must Fall",
     author: "halkon",
-    prefix: "everything-must-fall-",
+    prefix: "everything-must-fall",
     link: "https://halkon.itch.io/everything-must-fall",
     palette: {
       bg: "156,162,166",

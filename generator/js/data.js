@@ -1,3 +1,15 @@
+const plinthPositions = [{
+    room: 0,
+    x: 3,
+    y: 2
+  },
+  {
+    room: 0,
+    x: 7,
+    y: 2
+  }
+];
+
 const frontMatter = `
 b r 3
 
@@ -46,8 +58,7 @@ PAL 0
 
 // The base data for a plinth room
 // Does not include front or end matter (need to generate them)
-const plinthRoomData = `
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+const plinthRoomData = `0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -196,57 +207,47 @@ SPR A
 POS 0 0,0
 `; // Need to set room and location at some point
 
-const wideViewPlinthLeftData = `
-11111111
+const wideViewPlinthLeftData = `11111111
 11111100
 11111100
 11111111
 11111111
 11111111
 11111111
-11111111
-`; // These require the data, including SPR letter + DLG link + NAME + POS
+11111111`; // These require the data, including SPR letter + DLG link + NAME + POS
 
-const wideViewPlinthRightData = `
-11111111
+const wideViewPlinthRightData = `11111111
 00111111
 00111111
 11111111
 11111111
 11111111
 11111111
-11111111
-`
+11111111`
 
-const closeViewLabelLeftData = `
-11111111
+const closeViewLabelLeftData = `11111111
 10000000
 10000000
 10000000
 10000000
 10000000
 10000000
-11111111
-`;
+11111111`;
 
-const closeViewLabelRightData = `
-11111111
+const closeViewLabelRightData = `11111111
 00000001
 00000001
 00000001
 00000001
 00000001
 00000001
-11111111
-`;
+11111111`;
 
-const linkData = `
-00000000
+const linkData = `00000000
 00000000
 01100110
 10011001
 10011001
 01100110
 00000000
-00000000
-`;
+00000000`;
