@@ -9,7 +9,7 @@ const waterData = [{
       sprite: "255,255,255"
     },
     tileName: `sad-tile`,
-    // tileData: `${sad}`
+    tileData: sadTileData,
   },
   {
     title: "Everything Must Fall",
@@ -17,11 +17,11 @@ const waterData = [{
     prefix: "everything-must-fall",
     link: "https://halkon.itch.io/everything-must-fall",
     palette: {
-      bg: "156,162,166",
-      tile: "90,133,173",
+      bg: "153,173,173",
+      tile: "53,92,136",
       sprite: "255,255,255"
     },
     tileName: `fall-tile`,
-    // tileData: `${fall}`
+    tileData: fallTileData,
   }
 ];

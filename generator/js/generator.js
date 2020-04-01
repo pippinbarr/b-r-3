@@ -1,5 +1,6 @@
 window.onload = generate;
 
+let roomNumber = 10; // Needs to start after the last gallery room
 let currentSpriteIndex = 0;
 let currentSpriteRepeat = 1;
 let alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -8,20 +9,54 @@ function generate() {
   let output = '';
 
   // FRONT MATTER
-
-  output += frontMatter;
-
-  // PALETTES
-
-  output += defaultPalette;
-
-  for (let i = 0; i < waterData.length; i++) {
-    output += getPaletteData(i);
+  let frontMatter = {
+    title: "b r 3",
+    version: "# BITSY VERSION 6.5",
+    roomFormat: "! ROOM_FORMAT 1"
   }
 
-  // ROOMS
+  let mainPalette = {
+    id: 0,
+    name: "default-palette",
+    background: "183,180,183",
+    tile: "70,93,213",
+    sprite: "255,255,255"
+  }
 
-  output += middleRoom;
+  waterData.forEach((water) => {
+    setPaletteData(water);
+    setPlinthRoomData(water);
+  });
+
+  // ROOMS
+  let middleRoom = {
+    id: 0,
+    name: `middle-room`,
+    palette: mainPalette
+  }
+
+  // Add plinth exits
+  for (let i = 0; i < waterData.length; i++) {
+    let water = waterData[i];
+    water.room.destination = 0;
+    middleRoom.exits = [];
+    for (let x = 0; x <= 1; x++) {
+      for (let y = -2; y <= -1; y++) {
+        middleRoom.exits.push({
+          source: {
+            x: plinthPositions[i].x + x,
+            y: plinthPositions[i].y + y,
+          },
+          destination: {
+            room: water.plinthRoomNumber,
+            x: 7,
+            y: 6
+          }
+        });
+      }
+    }
+  }
+
 
   // TILES
 
@@ -42,6 +77,11 @@ function generate() {
     output += getWidePlinthSprites(i);
   }
 
+  // GENERATE CLOSE UP PLINTH LABELS
+  for (let i = 0; i < waterData.length; i++) {
+    output += getLabelSprites(i);
+  }
+
   // DIALOG
   for (let i = 0; i < waterData.length; i++) {
     output += getWidePlinthDialog(i);
@@ -50,15 +90,19 @@ function generate() {
   document.body.innerHTML = `<pre>${output}</pre>`;
 }
 
-function getPaletteData(i) {
-  let data = waterData[i];
-  return `
-PAL ${i+1}
-NAME ${data.prefix}-palette
-${data.palette.bg}
-${data.palette.tile}
-${data.palette.sprite}
-`
+function setPaletteData(water) {
+  water.palette.id = i + 1;
+  water.palette.name = `${water.prefix}-palette`
+}
+
+function setPlinthRoomData(water) {
+  let roomData = {
+    id: getNextRoomNumber(),
+    roomData: `${plinthRoomData}`,
+    name: `${water.prefix}`,
+    palette: `${water.palette.id}`
+  }
+  water.plinthRoom = roomData;
 }
 
 function getWidePlinthSprites(i) {
@@ -87,6 +131,32 @@ POS ${position.room} ${position.x + 1},${position.y}
   return output;
 }
 
+function getLabelSprites(i) {
+  let water = waterData[i];
+  let output = '';
+
+  // left side
+  output += `
+SPR ${getNextSpriteSymbol()}
+${closeViewLabelLeftData}
+NAME ${water.prefix}-plinth-label-left
+DLG ${water.prefix}-dialog
+POS ${water.plinthRoomNumber} ${plinthLabelLeftPosition}
+`
+
+  // right side
+  output += `
+SPR ${getNextSpriteSymbol()}
+${closeViewLabelRightData}
+NAME ${water.prefix}-plinth-label-right
+DLG ${water.prefix}-dialog
+POS ${water.plinthRoomNumber} ${plinthLabelRightPosition}
+`
+
+  return output;
+}
+
+
 function getNextSpriteSymbol() {
   let spriteSymbol = '';
   for (let j = 0; j < currentSpriteRepeat; j++) {
@@ -98,6 +168,10 @@ function getNextSpriteSymbol() {
     currentSpriteRepeat++;
   }
   return spriteSymbol;
+}
+
+function getNextRoomNumber() {
+  return roomNumber++;
 }
 
 function getWidePlinthDialog(i) {

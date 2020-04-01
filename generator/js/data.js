@@ -10,6 +10,9 @@ const plinthPositions = [{
   }
 ];
 
+const plinthLabelLeftPosition = "7,10";
+const plinthLabelRightPosition = "8,10";
+
 const frontMatter = `
 b r 3
 
@@ -34,9 +37,7 @@ NAME default-palette
 // d = plinth closeup left side
 // e = plinth closeup right side
 
-const middleRoom = `
-ROOM 0
-a,0,0,0,0,0,0,0,0,0,0,0,0,0,0,a
+const middleRoomData = `a,0,0,0,0,0,0,0,0,0,0,0,0,0,0,a
 b,0,0,0,0,0,0,0,0,0,0,0,0,0,0,b
 b,0,0,0,0,0,0,0,0,0,0,0,0,0,0,b
 b,0,0,0,0,0,0,0,0,0,0,0,0,0,0,b
@@ -51,10 +52,7 @@ b,0,0,0,0,0,0,0,0,0,0,0,0,0,0,b
 b,0,0,0,0,0,0,0,0,0,0,0,0,0,0,b
 a,0,0,0,0,0,0,0,0,0,0,0,0,0,0,a
 a,0,0,0,0,0,0,0,0,0,0,0,0,0,0,a
-a,0,0,0,0,0,0,0,0,0,0,0,0,0,0,a
-NAME middle-room
-PAL 0
-`;
+a,0,0,0,0,0,0,0,0,0,0,0,0,0,0,a`;
 
 // The base data for a plinth room
 // Does not include front or end matter (need to generate them)
@@ -73,8 +71,7 @@ const plinthRoomData = `0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,d,0,0,0,0,0,0,e,0,0,0,0
 0,0,0,0,d,0,0,0,0,0,0,e,0,0,0,0
 0,0,0,0,d,0,0,0,0,0,0,e,0,0,0,0
-0,0,0,0,d,0,0,0,0,0,0,e,0,0,0,0
-`
+0,0,0,0,d,0,0,0,0,0,0,e,0,0,0,0`
 
 // TILES
 
@@ -146,7 +143,7 @@ WAL false
 `
 
 // Temporarily here
-const fall = `
+const fallTileData = `
 TIL fall
 00000001
 00000010
@@ -169,7 +166,7 @@ NAME fall-tile
 WAL false
 `
 
-const sad = `
+const sadTileData = `
 TIL sad
 00000000
 01010101
