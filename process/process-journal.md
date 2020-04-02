@@ -51,3 +51,22 @@ ANOTHER option, now that I'm thinking about it, would be a kind of index room wi
 ## Generation?
 
 Still, maybe it's kind of neat? Also does this staaaaart to seem like something where I should generate the Bitsy data with code instead of doing all this crap manually? Given that it's just a kind of data thing at that point?! That would be bold. But kind of incredible...
+
+---
+
+# The Generation Game (Thursday, 2 April 2020, 11:47AM)
+
+Well since Monday's query, I did sit down and write generation code for the game over the last three days and... it works. I honestly think this is the right thing to do given the repetitive nature of the task. Notably it means that even once I've made the whole game I can make cosmetic changes at low cost for instance.
+
+So for now the generation code works only with a "middle room" (one with 3x6 plinths), and a data set of two, but it's sufficiently organized I'm not too worried about generalizing to the three rooms needed, nor to the addition of all the other waters.
+
+The actual collection and placement of the waters is a whole other thing of course, and mildly terrifying, BUT it should be alright. Or at least, it's the only manual task generally speaking, and it's possible I can get the algorithm to do some or all of it for waters that only have a single tile type for instance.
+
+So what's next?
+
+- Build the other two rooms so that they can go in
+- Solve the question of how you position waters across the different rooms (shouldn't be hard and should hopefully "just" involve including room information in the positions set according to how many slots each room has? Or just hard coding that element potentially).
+- Collect waters and put them in the game
+- Profit
+
+I'm optimistic this won't take too too much longer to finish, but I can imagine still working on this through next week pending the collection of waters in particular.
