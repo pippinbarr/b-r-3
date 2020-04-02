@@ -31,7 +31,7 @@ function generate() {
     id: getNextRoomNumber(),
     name: `front-room-exterior`,
     data: frontRoomExteriorData,
-    palette: mainPalette
+    palette: mainPalette,
   }
 
   let middleRoomExterior = {
@@ -67,6 +67,61 @@ function generate() {
     name: `back-room-interior`,
     data: backRoomInteriorData,
     palette: mainPalette
+  }
+
+  // Add main room exits
+  frontRoomExterior.exits = [
+    `0,0 ${middleRoomExterior.id} 0,15`,
+    `15,0 ${middleRoomExterior.id} 15,15`,
+    `7,10 ${frontRoomInterior.id} 7,9`,
+    `8,10 ${frontRoomInterior.id} 8,9`,
+  ];
+
+  middleRoomExterior.exits = [
+    `0,0 ${backRoomExterior.id} 0,15`,
+    `15,0 ${backRoomExterior.id} 15,15`,
+    `0,15 ${frontRoomExterior.id} 0,0`,
+    `15,15 ${frontRoomExterior.id} 15,0`,
+  ];
+
+  backRoomExterior.exits = [
+    `0,15 ${middleRoomExterior.id} 0,0`,
+    `15,15 ${middleRoomExterior.id} 15,0`,
+    `7,5 ${backRoomInterior.id} 7,6`,
+    `8,5 ${backRoomInterior.id} 8,6`,
+  ];
+
+
+  frontRoomInterior.exits = [
+    `7,10 ${frontRoomExterior.id} 7,11`,
+    `8,10 ${frontRoomExterior.id} 8,11`,
+  ];
+  for (let x = 2; x <= 13; x++) {
+    frontRoomInterior.exits.push(
+      `${x},0 ${middleRoomInterior.id} ${x},15`,
+      `${x},0 ${middleRoomInterior.id} ${x},15`,
+    )
+  }
+
+  middleRoomInterior.exits = [];
+  for (let x = 2; x <= 13; x++) {
+    middleRoomInterior.exits.push(
+      `${x},0 ${backRoomInterior.id} ${x},15`,
+      `${x},0 ${backRoomInterior.id} ${x},15`,
+      `${x},15 ${frontRoomInterior.id} ${x},0`,
+      `${x},15 ${frontRoomInterior.id} ${x},0`,
+    )
+  }
+
+  backRoomInterior.exits = [
+    `7,5 ${backRoomExterior.id} 7,4`,
+    `8,5 ${backRoomExterior.id} 8,4`,
+  ];
+  for (let x = 2; x <= 13; x++) {
+    backRoomInterior.exits.push(
+      `${x},15 ${middleRoomInterior.id} ${x},0`,
+      `${x},15 ${middleRoomInterior.id} ${x},0`,
+    )
   }
 
   // Add plinth exits
@@ -264,15 +319,14 @@ function generate() {
 }
 
 function setTransitions(room, waters) {
-  room.exits = [];
+  // room.exits = [];
   let positions = plinthPositions.filter(a => a.room === room.id);
   for (let i = 0; i < positions.length; i++) {
-    let water = waters.pop();
+    let water = waters.shift();
     if (!water) {
       console.error("Ran out of water.");
       return;
     }
-
     water.plinthRoom.return = {
       id: positions[i].room,
       x: positions[i].x,
@@ -280,36 +334,21 @@ function setTransitions(room, waters) {
     };
     for (let x = 0; x <= 1; x++) {
       for (let y = -2; y <= -1; y++) {
-        room.exits.push({
-          source: {
-            x: positions[i].x + x,
-            y: positions[i].y + y,
-          },
-          destination: {
-            id: water.plinthRoom.id,
-            x: 7,
-            y: 6
-          }
-        });
+        room.exits.push(
+          `${positions[i].x + x},${positions[i].y + y} ${water.plinthRoom.id} 7,6`
+        );
       }
     }
 
     water.plinthRoom.exits = [];
+
     // sides
     for (let x = 3; x < 13; x++) {
       for (let y = 3; y < 16; y++) {
         if (x !== 3 && x !== 12 && y != 3) continue;
-        water.plinthRoom.exits.push({
-          source: {
-            x: x,
-            y: y,
-          },
-          destination: {
-            id: water.plinthRoom.return.id,
-            x: water.plinthRoom.return.x,
-            y: water.plinthRoom.return.y
-          }
-        });
+        water.plinthRoom.exits.push(
+          `${x},${y} ${water.plinthRoom.return.id} ${water.plinthRoom.return.x},${water.plinthRoom.return.x}`
+        );
       }
     }
   }
@@ -394,7 +433,7 @@ function getRoomString(room) {
   if (room.exits) {
     for (let i = 0; i < room.exits.length; i++) {
       let exit = room.exits[i];
-      output += `EXT ${exit.source.x},${exit.source.y} ${exit.destination.id} ${exit.destination.x},${exit.destination.y}\n`;
+      output += `EXT ${exit}\n`;
     }
   }
   output += `PAL ${room.palette.id}`;
