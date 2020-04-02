@@ -1,6 +1,6 @@
 window.onload = generate;
 
-let roomNumber = 10; // Needs to start after the last gallery room
+let roomNumber = 0; // Needs to start after the last gallery room
 let currentSpriteIndex = 0;
 let currentSpriteRepeat = 1;
 let alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -27,42 +27,56 @@ function generate() {
   });
 
   // ROOMS
-  let middleRoom = {
-    id: 0,
-    name: `middle-room`,
-    data: middleRoomData,
+  let frontRoomExterior = {
+    id: getNextRoomNumber(),
+    name: `front-room-exterior`,
+    data: frontRoomExteriorData,
+    palette: mainPalette
+  }
+
+  let middleRoomExterior = {
+    id: getNextRoomNumber(),
+    name: `middle-room-exterior`,
+    data: middleRoomExteriorData,
+    palette: mainPalette
+  }
+
+  let backRoomExterior = {
+    id: getNextRoomNumber(),
+    name: `back-room-exterior`,
+    data: backRoomExteriorData,
+    palette: mainPalette
+  }
+
+  let frontRoomInterior = {
+    id: getNextRoomNumber(),
+    name: `front-room-interior`,
+    data: frontRoomInteriorData,
+    palette: mainPalette
+  }
+
+  let middleRoomInterior = {
+    id: getNextRoomNumber(),
+    name: `middle-room-interior`,
+    data: middleRoomInteriorData,
+    palette: mainPalette
+  }
+
+  let backRoomInterior = {
+    id: getNextRoomNumber(),
+    name: `back-room-interior`,
+    data: backRoomInteriorData,
     palette: mainPalette
   }
 
   // Add plinth exits
-  middleRoom.exits = [];
-  for (let i = 0; i < waterData.length; i++) {
-    let water = waterData[i];
-    water.plinthRoom.return = {
-      id: 0,
-      x: plinthPositions[i].x,
-      y: plinthPositions[i].y + 1
-    };
-    for (let x = 0; x <= 1; x++) {
-      for (let y = -2; y <= -1; y++) {
-        middleRoom.exits.push({
-          source: {
-            x: plinthPositions[i].x + x,
-            y: plinthPositions[i].y + y,
-          },
-          destination: {
-            id: water.plinthRoom.id,
-            x: 7,
-            y: 6
-          }
-        });
-      }
-    }
-  }
+  // Duplicate the water data so we can use it to populate the exits
+  let waterCopy = waterData.slice();
+  setTransitions(frontRoomInterior, waterCopy);
+  setTransitions(middleRoomInterior, waterCopy);
+  setTransitions(backRoomInterior, waterCopy);
 
-  for (let i = 0; i < waterData.length; i++) {
-    setPlinthRoomExits(waterData[i]);
-  }
+  let galleryRooms = [frontRoomExterior, frontRoomInterior, middleRoomExterior, middleRoomInterior, backRoomExterior, backRoomInterior];
 
   // TILES
 
@@ -70,9 +84,9 @@ function generate() {
 
   tiles.push({
     id: `a`,
-    name: `wall`,
+    name: `wall-v`,
     wall: true,
-    data: wallTileData
+    data: wallVTileData
   });
 
   tiles.push({
@@ -103,6 +117,56 @@ function generate() {
     data: plinthCloseRightSideData
   });
 
+  tiles.push({
+    id: `f`,
+    name: `wall-h`,
+    wall: true,
+    data: wallHData
+  });
+
+  tiles.push({
+    id: `g`,
+    name: `sw-corner`,
+    wall: true,
+    data: swCornerData
+  });
+
+  tiles.push({
+    id: `h`,
+    name: `se-corner`,
+    wall: true,
+    data: seCornerData
+  });
+
+  tiles.push({
+    id: `i`,
+    name: `roof`,
+    wall: true,
+    data: roofData
+  });
+
+  tiles.push({
+    id: `j`,
+    name: `roof-door`,
+    wall: false,
+    data: roofDoorData
+  });
+
+  tiles.push({
+    id: `k`,
+    name: `ne-corner`,
+    wall: true,
+    data: neCornerData
+  });
+
+  tiles.push({
+    id: `l`,
+    name: `nw-corner`,
+    wall: true,
+    data: nwCornerData
+  });
+
+
   // SPRITES
 
   let sprites = [];
@@ -114,9 +178,9 @@ function generate() {
     data: avatarSpriteData,
     dialog: undefined,
     position: {
-      room: 0,
-      x: 0,
-      y: 0
+      room: 24,
+      x: 7,
+      y: 13
     }
   });
 
@@ -156,7 +220,22 @@ function generate() {
   }
 
   // Rooms (and exits)
-  output += getRoomString(middleRoom);
+  output += getRoomString(frontRoomExterior);
+  output += `\n\n`;
+
+  output += getRoomString(middleRoomExterior);
+  output += `\n\n`;
+
+  output += getRoomString(backRoomExterior);
+  output += `\n\n`;
+
+  output += getRoomString(frontRoomInterior);
+  output += `\n\n`;
+
+  output += getRoomString(middleRoomInterior);
+  output += `\n\n`;
+
+  output += getRoomString(backRoomInterior);
   output += `\n\n`;
 
   for (let i = 0; i < waterData.length; i++) {
@@ -184,6 +263,58 @@ function generate() {
   document.body.innerHTML = `<pre>${output}</pre>`;
 }
 
+function setTransitions(room, waters) {
+  room.exits = [];
+  let positions = plinthPositions.filter(a => a.room === room.id);
+  for (let i = 0; i < positions.length; i++) {
+    let water = waters.pop();
+    if (!water) {
+      console.error("Ran out of water.");
+      return;
+    }
+
+    water.plinthRoom.return = {
+      id: positions[i].room,
+      x: positions[i].x,
+      y: positions[i].y + 1
+    };
+    for (let x = 0; x <= 1; x++) {
+      for (let y = -2; y <= -1; y++) {
+        room.exits.push({
+          source: {
+            x: positions[i].x + x,
+            y: positions[i].y + y,
+          },
+          destination: {
+            id: water.plinthRoom.id,
+            x: 7,
+            y: 6
+          }
+        });
+      }
+    }
+
+    water.plinthRoom.exits = [];
+    // sides
+    for (let x = 3; x < 13; x++) {
+      for (let y = 3; y < 16; y++) {
+        if (x !== 3 && x !== 12 && y != 3) continue;
+        water.plinthRoom.exits.push({
+          source: {
+            x: x,
+            y: y,
+          },
+          destination: {
+            id: water.plinthRoom.return.id,
+            x: water.plinthRoom.return.x,
+            y: water.plinthRoom.return.y
+          }
+        });
+      }
+    }
+  }
+}
+
 function setPaletteData(water, i) {
   water.palette.id = i + 1;
   water.palette.name = `${water.prefix}-palette`
@@ -198,27 +329,6 @@ function setPlinthRoomData(water) {
     exits: []
   }
   water.plinthRoom = roomData;
-}
-
-function setPlinthRoomExits(water) {
-  water.plinthRoom.exits = [];
-  // sides
-  for (let x = 3; x < 13; x++) {
-    for (let y = 3; y < 16; y++) {
-      if (x !== 3 && x !== 12 && y != 3) continue;
-      water.plinthRoom.exits.push({
-        source: {
-          x: x,
-          y: y,
-        },
-        destination: {
-          id: water.plinthRoom.return.id,
-          x: water.plinthRoom.return.x,
-          y: water.plinthRoom.return.y
-        }
-      });
-    }
-  }
 }
 
 function getWidePlinthSpriteData(water, position, data, suffix, offset) {
@@ -279,11 +389,13 @@ function getPaletteString(palette) {
 }
 
 function getRoomString(room) {
-  console.log("Room string for ", room.name, room.exits.length, " exits")
+  // console.log("Room string for ", room.name, room.exits.length, " exits")
   let output = `ROOM ${room.id}\n${room.data}\nNAME ${room.name}\n`
-  for (let i = 0; i < room.exits.length; i++) {
-    let exit = room.exits[i];
-    output += `EXT ${exit.source.x},${exit.source.y} ${exit.destination.id} ${exit.destination.x},${exit.destination.y}\n`;
+  if (room.exits) {
+    for (let i = 0; i < room.exits.length; i++) {
+      let exit = room.exits[i];
+      output += `EXT ${exit.source.x},${exit.source.y} ${exit.destination.id} ${exit.destination.x},${exit.destination.y}\n`;
+    }
   }
   output += `PAL ${room.palette.id}`;
   return output;

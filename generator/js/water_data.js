@@ -1,4 +1,4 @@
-const waterData = [{
+let waterData = [{
     title: "The World Has Been Sad Since Tuesday",
     author: "Fred Bednarski",
     prefix: "the-world-has-been-sad-since-tuesday",
@@ -25,3 +25,21 @@ const waterData = [{
     tileData: fallTileData,
   }
 ];
+
+// Generate fake water
+
+for (let i = 2; i < 24; i++) {
+  waterData.push({
+    title: "PLACEHOLDER",
+    author: "PLACEHOLDER",
+    prefix: `placeholder-${i}`,
+    link: "https://www.pippinbarr.com",
+    palette: {
+      background: "153,173,173",
+      tile: "53,92,136",
+      sprite: "255,255,255"
+    },
+    tileName: `placeholder-tile-${i}`,
+    tileData: fallTileData,
+  })
+}
