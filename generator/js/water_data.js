@@ -4,7 +4,7 @@ const waterData = [{
     prefix: "the-world-has-been-sad-since-tuesday",
     link: "https://vonbednar.itch.io/the-world-was-sad-since-tuesday",
     palette: {
-      bg: "156,162,166",
+      background: "156,162,166",
       tile: "90,133,173",
       sprite: "255,255,255"
     },
@@ -17,7 +17,7 @@ const waterData = [{
     prefix: "everything-must-fall",
     link: "https://halkon.itch.io/everything-must-fall",
     palette: {
-      bg: "153,173,173",
+      background: "153,173,173",
       tile: "53,92,136",
       sprite: "255,255,255"
     },

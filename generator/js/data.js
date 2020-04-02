@@ -10,8 +10,15 @@ const plinthPositions = [{
   }
 ];
 
-const plinthLabelLeftPosition = "7,10";
-const plinthLabelRightPosition = "8,10";
+const plinthLabelLeftPosition = {
+  x: 7,
+  y: 10
+}
+
+const plinthLabelRightPosition = {
+  x: 8,
+  y: 10
+}
 
 const frontMatter = `
 b r 3
@@ -75,72 +82,50 @@ const plinthRoomData = `0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 
 // TILES
 
-const wall = `
-TIL a
+const wallTileData = `00111100
 00111100
 00111100
 00111100
 00111100
 00111100
 00111100
-00111100
-00111100
-NAME wall
-WAL true
-`;
+00111100`;
 
-const win = `
-TIL b
-00010000
+const windowTileData = `00010000
 00001000
 00010000
 00001000
 00010000
 00001000
 00010000
-00001000
-NAME window
-`
-const block = `
-TIL c
-11111111
-11111111
-11111111
-11111111
-11111111
-11111111
-11111111
-11111111
-NAME block
-`
+00001000`
 
-const plinthCloseLeft = `
-TIL d
-10000000
-10000000
-10000000
-10000000
-10000000
-10000000
-10000000
-10000000
-NAME plinth-close-left
-WAL false
-`
+const blockTileData = `11111111
+11111111
+11111111
+11111111
+11111111
+11111111
+11111111
+11111111`
 
-const plinthCloseRight = `
-TIL e
+const plinthCloseLeftSideData = `10000000
+10000000
+10000000
+10000000
+10000000
+10000000
+10000000
+10000000`
+
+const plinthCloseRightSideData = `00000001
 00000001
 00000001
 00000001
 00000001
 00000001
 00000001
-00000001
-00000001
-NAME plinth-close-right
-WAL false
-`
+00000001`
 
 // Temporarily here
 const fallTileData = `
@@ -191,18 +176,14 @@ WAL false
 
 // SPRITES
 
-const avatarSprite = `
-SPR A
-00000000
+const avatarSpriteData = `00000000
 00111100
 01000010
 10011001
 10011001
 01000010
 00111100
-00000000
-POS 0 0,0
-`; // Need to set room and location at some point
+00000000`;
 
 const wideViewPlinthLeftData = `11111111
 11111100
@@ -211,7 +192,7 @@ const wideViewPlinthLeftData = `11111111
 11111111
 11111111
 11111111
-11111111`; // These require the data, including SPR letter + DLG link + NAME + POS
+11111111`;
 
 const wideViewPlinthRightData = `11111111
 00111111

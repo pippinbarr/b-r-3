@@ -6,8 +6,6 @@ let currentSpriteRepeat = 1;
 let alphabet = "abcdefghijklmnopqrstuvwxyz";
 
 function generate() {
-  let output = '';
-
   // FRONT MATTER
   let frontMatter = {
     title: "b r 3",
@@ -23,8 +21,8 @@ function generate() {
     sprite: "255,255,255"
   }
 
-  waterData.forEach((water) => {
-    setPaletteData(water);
+  waterData.forEach((water, index) => {
+    setPaletteData(water, index);
     setPlinthRoomData(water);
   });
 
@@ -32,14 +30,19 @@ function generate() {
   let middleRoom = {
     id: 0,
     name: `middle-room`,
+    data: middleRoomData,
     palette: mainPalette
   }
 
   // Add plinth exits
+  middleRoom.exits = [];
   for (let i = 0; i < waterData.length; i++) {
     let water = waterData[i];
-    water.room.destination = 0;
-    middleRoom.exits = [];
+    water.plinthRoom.return = {
+      id: 0,
+      x: plinthPositions[i].x,
+      y: plinthPositions[i].y + 1
+    };
     for (let x = 0; x <= 1; x++) {
       for (let y = -2; y <= -1; y++) {
         middleRoom.exits.push({
@@ -48,7 +51,7 @@ function generate() {
             y: plinthPositions[i].y + y,
           },
           destination: {
-            room: water.plinthRoomNumber,
+            id: water.plinthRoom.id,
             x: 7,
             y: 6
           }
@@ -57,40 +60,131 @@ function generate() {
     }
   }
 
+  for (let i = 0; i < waterData.length; i++) {
+    setPlinthRoomExits(waterData[i]);
+  }
 
   // TILES
 
-  // Wall and windows for the main room
-  output += wall + win;
+  let tiles = [];
 
-  // Block and plinth sides for plinth rooms
-  output += block + plinthCloseLeft + plinthCloseRight;
+  tiles.push({
+    id: `a`,
+    name: `wall`,
+    wall: true,
+    data: wallTileData
+  });
 
-  // AVATAR
+  tiles.push({
+    id: `b`,
+    name: `window`,
+    wall: true,
+    data: windowTileData
+  });
 
-  output += avatarSprite;
+  tiles.push({
+    id: `c`,
+    name: `block`,
+    wall: false,
+    data: blockTileData
+  });
+
+  tiles.push({
+    id: `d`,
+    name: `plinth-close-left-side`,
+    wall: false,
+    data: plinthCloseLeftSideData
+  });
+
+  tiles.push({
+    id: `e`,
+    name: `plinth-close-right-side`,
+    wall: false,
+    data: plinthCloseRightSideData
+  });
+
+  // SPRITES
+
+  let sprites = [];
+
+  // Avatar
+  sprites.push({
+    id: `A`,
+    name: `avatar`,
+    data: avatarSpriteData,
+    dialog: undefined,
+    position: {
+      room: 0,
+      x: 0,
+      y: 0
+    }
+  });
 
   // SPRITES
 
   // GENERATE WIDE VIEW PLINTHS
   for (let i = 0; i < waterData.length; i++) {
-    output += getWidePlinthSprites(i);
+    sprites.push(getWidePlinthSpriteData(waterData[i], plinthPositions[i], wideViewPlinthLeftData, 'left', 0));
+    sprites.push(getWidePlinthSpriteData(waterData[i], plinthPositions[i], wideViewPlinthRightData, 'right', 1));
   }
 
   // GENERATE CLOSE UP PLINTH LABELS
   for (let i = 0; i < waterData.length; i++) {
-    output += getLabelSprites(i);
+    sprites.push(getLabelSpriteData(waterData[i], 'left', closeViewLabelLeftData, plinthLabelLeftPosition));
+    sprites.push(getLabelSpriteData(waterData[i], 'right', closeViewLabelRightData, plinthLabelRightPosition));
   }
 
   // DIALOG
+  let dialog = [];
+
   for (let i = 0; i < waterData.length; i++) {
-    output += getWidePlinthDialog(i);
+    dialog.push(getDialog(waterData[i]));
+  }
+
+  // CONSTRUCT OUTPUT
+  let output = '';
+
+  // Front matter
+  output += `${frontMatter.title}\n\n${frontMatter.version}\n\n${frontMatter.roomFormat}\n\n`;
+
+  // Palettes
+  output += getPaletteString(mainPalette);
+  output += `\n\n`;
+  for (let i = 0; i < waterData.length; i++) {
+    output += getPaletteString(waterData[i].palette);
+    output += `\n\n`;
+  }
+
+  // Rooms (and exits)
+  output += getRoomString(middleRoom);
+  output += `\n\n`;
+
+  for (let i = 0; i < waterData.length; i++) {
+    output += getRoomString(waterData[i].plinthRoom);
+    output += `\n\n`;
+  }
+
+  // Tiles
+  for (let i = 0; i < tiles.length; i++) {
+    output += getTileString(tiles[i]);
+    output += `\n\n`;
+  }
+
+  // Sprites
+  for (let i = 0; i < sprites.length; i++) {
+    output += getSpriteString(sprites[i]);
+    output += `\n\n`;
+  }
+
+  for (let i = 0; i < dialog.length; i++) {
+    output += getDialogString(dialog[i]);
+    output += `\n\n`;
   }
 
   document.body.innerHTML = `<pre>${output}</pre>`;
 }
 
-function setPaletteData(water) {
+function setPaletteData(water, i) {
   water.palette.id = i + 1;
   water.palette.name = `${water.prefix}-palette`
 }
@@ -98,62 +192,61 @@ function setPaletteData(water) {
 function setPlinthRoomData(water) {
   let roomData = {
     id: getNextRoomNumber(),
-    roomData: `${plinthRoomData}`,
-    name: `${water.prefix}`,
-    palette: `${water.palette.id}`
+    data: plinthRoomData,
+    name: water.prefix,
+    palette: water.palette,
+    exits: []
   }
   water.plinthRoom = roomData;
 }
 
-function getWidePlinthSprites(i) {
-  let data = waterData[i];
-  let position = plinthPositions[i];
-
-  let output = '';
-  // left side
-  output += `
-SPR ${getNextSpriteSymbol()}
-${wideViewPlinthLeftData}
-NAME ${waterData[i].prefix}-wide-plinth-left
-DLG ${data.prefix}-dialog
-POS ${position.room} ${position.x},${position.y}
-`
-
-  // right side
-  output += `
-SPR ${getNextSpriteSymbol()}
-${wideViewPlinthRightData}
-NAME ${waterData[i].prefix}-wide-plinth-right
-DLG ${data.prefix}-dialog
-POS ${position.room} ${position.x + 1},${position.y}
-`
-
-  return output;
+function setPlinthRoomExits(water) {
+  water.plinthRoom.exits = [];
+  // sides
+  for (let x = 3; x < 13; x++) {
+    for (let y = 3; y < 16; y++) {
+      if (x !== 3 && x !== 12 && y != 3) continue;
+      water.plinthRoom.exits.push({
+        source: {
+          x: x,
+          y: y,
+        },
+        destination: {
+          id: water.plinthRoom.return.id,
+          x: water.plinthRoom.return.x,
+          y: water.plinthRoom.return.y
+        }
+      });
+    }
+  }
 }
 
-function getLabelSprites(i) {
-  let water = waterData[i];
-  let output = '';
+function getWidePlinthSpriteData(water, position, data, suffix, offset) {
+  return {
+    id: getNextSpriteSymbol(),
+    name: `${water.prefix}-wide-plinth-${suffix}`,
+    data: data,
+    dialog: `${water.prefix}-dialog`,
+    position: {
+      room: position.room,
+      x: position.x + offset,
+      y: position.y
+    }
+  }
+}
 
-  // left side
-  output += `
-SPR ${getNextSpriteSymbol()}
-${closeViewLabelLeftData}
-NAME ${water.prefix}-plinth-label-left
-DLG ${water.prefix}-dialog
-POS ${water.plinthRoomNumber} ${plinthLabelLeftPosition}
-`
-
-  // right side
-  output += `
-SPR ${getNextSpriteSymbol()}
-${closeViewLabelRightData}
-NAME ${water.prefix}-plinth-label-right
-DLG ${water.prefix}-dialog
-POS ${water.plinthRoomNumber} ${plinthLabelRightPosition}
-`
-
-  return output;
+function getLabelSpriteData(water, suffix, data, position) {
+  return {
+    id: getNextSpriteSymbol(),
+    name: `${water.prefix}-plinth-label-${suffix}`,
+    data: data,
+    dialog: `${water.prefix}-dialog`,
+    position: {
+      room: water.plinthRoom.id,
+      x: position.x,
+      y: position.y
+    }
+  }
 }
 
 
@@ -174,10 +267,41 @@ function getNextRoomNumber() {
   return roomNumber++;
 }
 
-function getWidePlinthDialog(i) {
-  return `
-DLG ${waterData[i].prefix}-dialog
-${waterData[i].title} by ${waterData[i].author}
-`;
+function getDialog(water) {
+  return {
+    name: `${water.prefix}-dialog`,
+    text: `${water.title} by ${water.author}`
+  }
+}
 
+function getPaletteString(palette) {
+  return `PAL ${palette.id}\nNAME ${palette.name}\n${palette.background}\n${palette.tile}\n${palette.sprite}`;
+}
+
+function getRoomString(room) {
+  console.log("Room string for ", room.name, room.exits.length, " exits")
+  let output = `ROOM ${room.id}\n${room.data}\nNAME ${room.name}\n`
+  for (let i = 0; i < room.exits.length; i++) {
+    let exit = room.exits[i];
+    output += `EXT ${exit.source.x},${exit.source.y} ${exit.destination.id} ${exit.destination.x},${exit.destination.y}\n`;
+  }
+  output += `PAL ${room.palette.id}`;
+  return output;
+}
+
+function getTileString(tile) {
+  return `TIL ${tile.id}\n${tile.data}\nNAME ${tile.name}\nWAL ${tile.wall}`;
+}
+
+function getSpriteString(sprite) {
+  let output = `SPR ${sprite.id}\n${sprite.data}\nNAME ${sprite.name}`;
+  if (sprite.dialog) {
+    output += `\nDLG ${sprite.dialog}`;
+  }
+  output += `\nPOS ${sprite.position.room} ${sprite.position.x},${sprite.position.y}`;
+  return output;
+}
+
+function getDialogString(dialog) {
+  return `DLG ${dialog.name}\n${dialog.text}`;
 }
