@@ -1,11 +1,11 @@
 // generate plinth positions
 let room = 27;
 let startX = 3;
-let startY = 6;
+let startY = 7;
 let totalPositions = 24;
 
 let plinthPositions = [];
-for (let y = startY; y >= 2; y -= 4) {
+for (let y = startY; y >= 4; y -= 3) {
   for (let x = startX; x <= 11; x += 4) {
     plinthPositions.push({
       room: room,
@@ -13,26 +13,15 @@ for (let y = startY; y >= 2; y -= 4) {
       y: y
     });
   }
-  if (y === 2) {
+  if (y === 4) {
     room++;
-    y = 18;
+    y = 16;
   }
   if (plinthPositions.length === totalPositions) break;
 }
 
 console.log(plinthPositions);
 
-// const plinthPositions = [{
-//     room: 5,
-//     x: 3,
-//     y: 2
-//   },
-//   {
-//     room: 5,
-//     x: 7,
-//     y: 2
-//   }
-// ];
 
 const plinthLabelLeftPosition = {
   x: 7,

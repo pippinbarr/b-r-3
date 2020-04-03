@@ -91,25 +91,24 @@ function generate() {
     `8,5 ${backRoomInterior.id} 8,6`,
   ];
 
-
   frontRoomInterior.exits = [
     `7,10 ${frontRoomExterior.id} 7,11`,
     `8,10 ${frontRoomExterior.id} 8,11`,
   ];
   for (let x = 2; x <= 13; x++) {
     frontRoomInterior.exits.push(
-      `${x},0 ${middleRoomInterior.id} ${x},15`,
-      `${x},0 ${middleRoomInterior.id} ${x},15`,
+      `${x},0 ${middleRoomInterior.id} ${x},14`,
+      `${x},0 ${middleRoomInterior.id} ${x},14`,
     )
   }
 
   middleRoomInterior.exits = [];
   for (let x = 2; x <= 13; x++) {
     middleRoomInterior.exits.push(
-      `${x},0 ${backRoomInterior.id} ${x},15`,
-      `${x},0 ${backRoomInterior.id} ${x},15`,
-      `${x},15 ${frontRoomInterior.id} ${x},0`,
-      `${x},15 ${frontRoomInterior.id} ${x},0`,
+      `${x},0 ${backRoomInterior.id} ${x},14`,
+      `${x},0 ${backRoomInterior.id} ${x},14`,
+      `${x},15 ${frontRoomInterior.id} ${x},1`,
+      `${x},15 ${frontRoomInterior.id} ${x},1`,
     )
   }
 
@@ -119,8 +118,8 @@ function generate() {
   ];
   for (let x = 2; x <= 13; x++) {
     backRoomInterior.exits.push(
-      `${x},15 ${middleRoomInterior.id} ${x},0`,
-      `${x},15 ${middleRoomInterior.id} ${x},0`,
+      `${x},15 ${middleRoomInterior.id} ${x},1`,
+      `${x},15 ${middleRoomInterior.id} ${x},1`,
     )
   }
 
@@ -154,7 +153,7 @@ function generate() {
   tiles.push({
     id: `c`,
     name: `block`,
-    wall: false,
+    wall: true,
     data: blockTileData
   });
 
@@ -333,8 +332,9 @@ function setTransitions(room, waters) {
       y: positions[i].y + 1
     };
     for (let x = 0; x <= 1; x++) {
-      for (let y = -2; y <= -1; y++) {
+      for (let y = -1; y <= -1; y++) {
         room.exits.push(
+          // Exit taking you from the water in the gallery to the water in the plinth room
           `${positions[i].x + x},${positions[i].y + y} ${water.plinthRoom.id} 7,6`
         );
       }
@@ -347,7 +347,7 @@ function setTransitions(room, waters) {
       for (let y = 3; y < 16; y++) {
         if (x !== 3 && x !== 12 && y != 3) continue;
         water.plinthRoom.exits.push(
-          `${x},${y} ${water.plinthRoom.return.id} ${water.plinthRoom.return.x},${water.plinthRoom.return.x}`
+          `${x},${y} ${water.plinthRoom.return.id} ${water.plinthRoom.return.x},${water.plinthRoom.return.y}`
         );
       }
     }
