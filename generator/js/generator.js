@@ -261,15 +261,43 @@ function generate() {
   for (let i = 0; i < waterData.length; i++) {
     let water = waterData[i];
     water.tileData.push(blockTileData)
+    water.tileIDs = [];
     for (let j = 0; j < water.tileData.length; j++) {
       let tile = water.tileData[j];
+      let id = getNextTileSymbol();
+      water.tileIDs.push(id);
       tiles.push({
-        id: getNextTileSymbol(),
+        id: id,
         name: `${water.prefix}-tile-${j}`,
         wall: false,
         data: tile
       });
     }
+  }
+
+  // EDIT ROOMS TO INCLUDE RANDOM WATER TILES
+  for (let i = 0; i < waterData.length; i++) {
+    // Place water in plinth in gallery view
+    let water = waterData[i];
+    let galleryRoom = water.plinth.room;
+    let x = water.plinth.x;
+    let y = water.plinth.y - 1;
+    let rows = galleryRoom.data.split(/\n/)
+    let row = rows[y];
+    let chars = row.split(/,/);
+    chars[x] = water.tileIDs[0];
+    chars[x + 1] = water.tileIDs[0];
+    row = chars.join(',');
+    rows[y] = row;
+    let newRoomData = rows.join('\n');
+    water.plinth.room.data = newRoomData;
+
+    // Replace water in plinth room
+    let plinthRoomData = water.plinthRoom.data;
+    plinthRoomData = plinthRoomData.replace(/c/g, () => water.tileIDs[Math.floor(Math.random() * water.tileIDs.length)]);
+    console.log(plinthRoomData)
+
+    water.plinthRoom.data = plinthRoomData;
   }
 
 
@@ -378,6 +406,11 @@ function setTransitions(room, waters) {
       console.error("Ran out of water.");
       return;
     }
+    water.plinth = {
+      room: room,
+      x: positions[i].x,
+      y: positions[i].y
+    };
     water.plinthRoom.return = {
       id: positions[i].room,
       x: positions[i].x,
