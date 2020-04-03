@@ -9,8 +9,29 @@ let waterData = [{
       sprite: "255,255,255"
     },
     tileName: `sad-tile`,
-    tileData: sadTileData,
+    tileData: [
+      `00000000
+01010101
+10101010
+01010101
+11111111
+11111111
+11111111
+11111111
+>
+01010101
+10101010
+01010101
+11111111
+11111111
+11111111
+11111111
+11111111`,
+    ],
   },
+
+
+
   {
     title: "Everything Must Fall",
     author: "halkon",
@@ -22,7 +43,25 @@ let waterData = [{
       sprite: "255,255,255"
     },
     tileName: `fall-tile`,
-    tileData: fallTileData,
+    tileData: [
+      `00000001
+00000010
+00001100
+11110000
+00000111
+11001000
+00001000
+00110010
+>
+00000010
+00001100
+11110000
+00000111
+11001000
+00001000
+00110010
+00000001`
+    ],
   }
 ];
 
@@ -40,6 +79,6 @@ for (let i = 2; i < 24; i++) {
       sprite: "255,255,255"
     },
     tileName: `placeholder-tile-${i}`,
-    tileData: fallTileData,
+    tileData: [fallTileData],
   })
 }

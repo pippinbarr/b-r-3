@@ -1,8 +1,17 @@
 window.onload = generate;
 
 let roomNumber = 0; // Needs to start after the last gallery room
-let currentSpriteIndex = 0;
-let currentSpriteRepeat = 1;
+
+let spriteSymbol = {
+  current: 0,
+  repeat: 1
+}
+
+let tileSymbol = {
+  current: 11,
+  repeat: 1
+}
+
 let alphabet = "abcdefghijklmnopqrstuvwxyz";
 
 function generate() {
@@ -220,6 +229,20 @@ function generate() {
     data: nwCornerData
   });
 
+  // Water tiles
+  for (let i = 0; i < waterData.length; i++) {
+    let water = waterData[i];
+    for (let j = 0; j < water.tileData.length; j++) {
+      let tile = water.tileData[j];
+      tiles.push({
+        id: getNextTileSymbol(),
+        name: `${water.prefix}-tile-${j}`,
+        wall: false,
+        data: tile
+      });
+    }
+  }
+
 
   // SPRITES
 
@@ -398,19 +421,28 @@ function getLabelSpriteData(water, suffix, data, position) {
   }
 }
 
-
+//
 function getNextSpriteSymbol() {
-  let spriteSymbol = '';
-  for (let j = 0; j < currentSpriteRepeat; j++) {
-    spriteSymbol += alphabet[currentSpriteIndex];
-  }
-  currentSpriteIndex++;
-  if (currentSpriteIndex === alphabet.length) {
-    currentSpriteIndex = 0;
-    currentSpriteRepeat++;
-  }
-  return spriteSymbol;
+  return getNextSymbol(spriteSymbol);
 }
+
+function getNextTileSymbol() {
+  return getNextSymbol(tileSymbol);
+}
+
+function getNextSymbol(config) {
+  let symbol = '';
+  for (let i = 0; i < config.repeat; i++) {
+    symbol += alphabet[config.current];
+  }
+  config.current++;
+  if (config.current === alphabet.length) {
+    config.current = 0;
+    config.repeat++;
+  }
+  return symbol;
+}
+
 
 function getNextRoomNumber() {
   return roomNumber++;
