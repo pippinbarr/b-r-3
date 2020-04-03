@@ -2,17 +2,17 @@ window.onload = generate;
 
 let roomNumber = 0; // Needs to start after the last gallery room
 
+let alphabet = "abcdefghijklmnopqrstuvwxyz";
+
 let spriteSymbol = {
   current: 0,
   repeat: 1
 }
 
 let tileSymbol = {
-  current: 11,
+  current: alphabet.indexOf("q"),
   repeat: 1
 }
-
-let alphabet = "abcdefghijklmnopqrstuvwxyz";
 
 function generate() {
   // FRONT MATTER
@@ -229,9 +229,38 @@ function generate() {
     data: nwCornerData
   });
 
+  tiles.push({
+    id: `m`,
+    name: `plinth-close-top-side`,
+    wall: false,
+    data: plinthCloseTopSideData
+  });
+
+  tiles.push({
+    id: `n`,
+    name: `plinth-close-nw-corner`,
+    wall: false,
+    data: plinthCloseNWCornerData
+  });
+
+  tiles.push({
+    id: `o`,
+    name: `plinth-close-ne-corner`,
+    wall: false,
+    data: plinthCloseNECornerData
+  });
+
+  tiles.push({
+    id: `p`,
+    name: `plinth-room-bg`,
+    wall: false,
+    data: plinthRoomBackgroundData
+  });
+
   // Water tiles
   for (let i = 0; i < waterData.length; i++) {
     let water = waterData[i];
+    water.tileData.push(blockTileData)
     for (let j = 0; j < water.tileData.length; j++) {
       let tile = water.tileData[j];
       tiles.push({

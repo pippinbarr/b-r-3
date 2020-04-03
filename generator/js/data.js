@@ -177,22 +177,22 @@ const backRoomExteriorData = `0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 
 // The base data for a plinth room
 // Does not include front or end matter (need to generate them)
-const plinthRoomData = `0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,c,c,c,c,c,c,c,c,0,0,0,0
-0,0,0,0,c,c,c,c,c,c,c,c,0,0,0,0
-0,0,0,0,c,c,c,c,c,c,c,c,0,0,0,0
-0,0,0,0,c,c,c,c,c,c,c,c,0,0,0,0
-0,0,0,0,c,c,c,c,c,c,c,c,0,0,0,0
-0,0,0,0,d,0,0,0,0,0,0,e,0,0,0,0
-0,0,0,0,d,0,0,0,0,0,0,e,0,0,0,0
-0,0,0,0,d,0,0,0,0,0,0,e,0,0,0,0
-0,0,0,0,d,0,0,0,0,0,0,e,0,0,0,0
-0,0,0,0,d,0,0,0,0,0,0,e,0,0,0,0
-0,0,0,0,d,0,0,0,0,0,0,e,0,0,0,0
-0,0,0,0,d,0,0,0,0,0,0,e,0,0,0,0`
+const plinthRoomData = `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,c,c,c,c,c,c,c,c,p,p,p,p
+p,p,p,p,c,c,c,c,c,c,c,c,p,p,p,p
+p,p,p,p,c,c,c,c,c,c,c,c,p,p,p,p
+p,p,p,p,c,c,c,c,c,c,c,c,p,p,p,p
+p,p,p,p,c,c,c,c,c,c,c,c,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
 
 // TILES
 
@@ -303,6 +303,41 @@ const plinthCloseRightSideData = `00000001
 00000001
 00000001
 00000001`
+
+const plinthCloseTopSideData = `11111111
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000`
+
+const plinthCloseNWCornerData = `11111111
+10000000
+10000000
+10000000
+10000000
+10000000
+10000000
+10000000`
+
+const plinthCloseNECornerData = `11111111
+00000001
+00000001
+00000001
+00000001
+00000001
+00000001
+00000001`
+
+const plinthRoomBackgroundData = `00000000
+00010000
+00000001
+00000000
+10000000
+00000100
+00000000`
 
 // Temporarily here
 const fallTileData = `00000001
