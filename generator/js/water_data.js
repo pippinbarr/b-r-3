@@ -292,6 +292,114 @@ let waterData = [{
 
 
 
+
+
+
+  {
+    title: "fiddler's island, summer 2016",
+    author: "ruin",
+    prefix: "fiddlers-island",
+    link: "https://ruin.itch.io/fiddlers-island-summer-2016",
+    palette: {
+      background: "77,79,92",
+      tile: "95,118,144",
+      sprite: "128,137,176"
+    },
+    tileData: [
+      `11111111
+11111111
+00000000
+11111111
+11111111
+00000000
+11111111
+11111111
+>
+00000000
+11111111
+11111111
+00000000
+11111111
+11111111
+00000000
+11111111`
+    ],
+  },
+
+
+
+
+
+
+  {
+    title: "Princess Peppercorn's Pug Plan",
+    author: "Adam Saltsman and bexsaltsman",
+    prefix: "princess-peppercorn",
+    link: "https://adamatomic.itch.io/peppercorn",
+    palette: {
+      background: "145,44,136",
+      tile: "246,147,226",
+      sprite: "255,255,255"
+    },
+    tileData: [
+      `00000000
+00100000
+00100000
+00100000
+00000100
+00000100
+00000000
+00000000
+>
+00000000
+00000100
+00000100
+00100000
+00100000
+00100000
+00000000
+00000000`
+    ],
+  },
+
+
+
+
+
+
+  {
+    title: "Stranger Point",
+    author: "lunafromthemoon",
+    prefix: "stranger-point",
+    link: "https://lunafromthemoon.itch.io/stranger-point",
+    palette: {
+      background: "40,48,84",
+      tile: "195,255,252",
+      sprite: "255,255,255"
+    },
+    tileData: [
+      `00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+11000011
+00111100
+>
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00111100
+11000011`
+    ],
+  },
+
+
+
 ];
 
 
