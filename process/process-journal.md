@@ -70,3 +70,15 @@ So what's next?
 - Profit
 
 I'm optimistic this won't take too too much longer to finish, but I can imagine still working on this through next week pending the collection of waters in particular.
+
+---
+
+# Water accumulation (Tuesday, 7 April 2020, 12:04PM)
+
+We now have eight waters in place, meaning that the front room is full and we're into filling out the second room. Still 16 waters needed, but we're a third of the way there and I put in I think four or five waters today without much trouble in it.
+
+The key observation for right now is that even with always placing the first tile in the gallery view and random placement into the plinth view, it really looks pretty neat and I think the project as a whole is totally justified by this experience of seeing these views.
+
+Remaining is to place the next 16 waters and then to hand place the tiles in the plinth view at the view least (quite possible in the gallery view too). I suspect it will be wise, as I noted in one commit, to save the room data etc. into the generator so that I can re-generate the game with the hand-placed versions in place in case something comes up.
+
+Lord knows not too many people are going to bother looking at this project, but I really think it's quite a lovely piece of work both in terms of its relationship to v r 3, to Unity versus Bitsy, and just to the general idea of a Bitsy community and practice. It's a winner.
