@@ -218,13 +218,87 @@ let waterData = [{
 11100011
 11111111`
     ],
-  }
+  },
+
+
+
+
+  {
+    title: "The Thing in the Lake",
+    author: "chiropteram",
+    prefix: "thing-in-the-lake",
+    link: "https://chiropteram.itch.io/the-thing-in-the-lake",
+    palette: {
+      background: "117,156,126",
+      tile: "0,0,0",
+      sprite: "0,0,0"
+    },
+    tileData: [
+      `100000000
+10000000
+01100000
+00010000
+00010000
+00001000
+00001000
+00000111
+>
+01100000
+00010000
+00010000
+00001000
+00001000
+00000111
+00000000
+00000000`
+    ],
+  },
+
+
+
+
+
+
+  {
+    title: "Seven Simple Wonders",
+    author: "Candal",
+    prefix: "seven-simple-wonders",
+    link: "https://candal.itch.io/sevensimplewonders",
+    palette: {
+      background: "195,251,228",
+      tile: "131,124,114",
+      sprite: "255,189,87"
+    },
+    tileData: [
+      `11111111
+10011111
+11111111
+11111000
+11111111
+00011111
+11111111
+11111111
+>
+11111111
+11001111
+11111111
+11110001
+11111111
+10001111
+11111111
+11111111`
+    ],
+  },
+
+
+
 ];
 
 
 
 
-// Generate fake water
+
+// Generate fake water to fill the remainder of the 24
 
 for (let i = waterData.length; i < 24; i++) {
   waterData.push({
