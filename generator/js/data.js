@@ -33,6 +33,11 @@ const plinthLabelRightPosition = {
   y: 10
 }
 
+const linkPosition = {
+  x: 10,
+  y: 10
+}
+
 const frontMatter = `
 b r 3
 

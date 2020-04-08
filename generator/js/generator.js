@@ -330,6 +330,7 @@ function generate() {
   for (let i = 0; i < waterData.length; i++) {
     sprites.push(getLabelSpriteData(waterData[i], 'left', closeViewLabelLeftData, plinthLabelLeftPosition));
     sprites.push(getLabelSpriteData(waterData[i], 'right', closeViewLabelRightData, plinthLabelRightPosition));
+    sprites.push(getLinkSpriteData(waterData[i], linkPosition));
   }
 
   // DIALOG
@@ -337,6 +338,7 @@ function generate() {
 
   for (let i = 0; i < waterData.length; i++) {
     dialog.push(getDialog(waterData[i]));
+    dialog.push(getLinkDialog(waterData[i]));
   }
 
   // CONSTRUCT OUTPUT
@@ -483,6 +485,21 @@ function getLabelSpriteData(water, suffix, data, position) {
   }
 }
 
+
+function getLinkSpriteData(water, position) {
+  return {
+    id: getNextSpriteSymbol(),
+    name: `${water.prefix}-plinth-link`,
+    data: linkData,
+    dialog: `${water.prefix}-link-dialog`,
+    position: {
+      room: water.plinthRoom.id,
+      x: position.x,
+      y: position.y
+    }
+  }
+}
+
 //
 function getNextSpriteSymbol() {
   return getNextSymbol(spriteSymbol);
@@ -514,6 +531,13 @@ function getDialog(water) {
   return {
     name: `${water.prefix}-dialog`,
     text: `${water.title} by ${water.author}`
+  }
+}
+
+function getLinkDialog(water) {
+  return {
+    name: `${water.prefix}-link-dialog`,
+    text: `(js "window.open('${water.link}','_blank')")`
   }
 }
 
