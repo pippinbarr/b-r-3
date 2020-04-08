@@ -740,6 +740,128 @@ let waterData = [{
   },
 
 
+
+
+
+  {
+    title: "an evening stroll'",
+    author: "Laiska",
+    prefix: "an-evening-stroll",
+    link: "https://laiska.itch.io/an-evening-stroll",
+    palette: {
+      background: "132,107,170",
+      tile: "181,157,225",
+      sprite: "251,218,228"
+    },
+    tileData: [
+      `00000000
+00000000
+00011000
+00100100
+11000011
+00000000
+00001110
+11110001
+>
+00000000
+00001100
+00010010
+11100001
+00000000
+00000000
+00011100
+11100011`,
+      `00000000
+00000000
+00011000
+00100100
+11000011
+00000000
+00001110
+11110001
+>
+00000000
+00110000
+01001000
+10000111
+00000000
+00000000
+11110001
+00001110`
+    ],
+  },
+
+
+
+
+  {
+    title: "Once I was an Egg'",
+    author: "Juliette Amorati",
+    prefix: "once-i-was-an-egg",
+    link: "https://julietteamorati.itch.io/once-i-was-an-egg",
+    palette: {
+      background: "136,223,101",
+      tile: "84,153,58",
+      sprite: "255,255,255"
+    },
+    tileData: [
+      `00000000
+00000000
+10000000
+11100011
+11111111
+11111111
+11111111
+11111111
+>
+00000000
+00000000
+01000000
+11110001
+11111111
+11111111
+11111111
+11111111`
+    ],
+  },
+
+
+
+
+
+  {
+    title: "Stream Explorer!",
+    author: "Elijah One",
+    prefix: "stream-explorer",
+    link: "https://elijahone.itch.io/stream-explorer",
+    palette: {
+      background: "227,235,149",
+      tile: "59,130,230",
+      sprite: "9,254,238"
+    },
+    tileData: [
+      `10011001
+10101010
+01100110
+00000000
+00110011
+01010101
+11001100
+00000000
+>
+00110011
+01010101
+11001100
+00000000
+10011001
+10101010
+01100110
+00000000`
+    ],
+  },
+
+
+
 ];
 
 
