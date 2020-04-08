@@ -606,6 +606,140 @@ let waterData = [{
   },
 
 
+
+
+
+
+
+
+  {
+    title: "Eggway Dreams",
+    author: "efreeteater",
+    prefix: "eggway-dreams",
+    link: "https://efreeteater.itch.io/eggway-dreams",
+    palette: {
+      background: "130,203,106",
+      tile: "21,122,110",
+      sprite: "255,238,255"
+    },
+    tileData: [
+      `10000000
+01010000
+10001000
+00010000
+10000000
+01010000
+10001000
+00010000
+>
+00100010
+00010001
+00010001
+00100010
+00100010
+00010001
+00010001
+00100010`
+    ],
+  },
+
+
+
+
+  {
+    title: "Talkative Plants",
+    author: "papercookies",
+    prefix: "talkative-plants",
+    link: "https://papercookies.itch.io/talkative-plants",
+    palette: {
+      background: "246,248,222",
+      tile: "240,142,169",
+      sprite: "145,230,225"
+    },
+    tileData: [
+      `11111111
+11111011
+11110101
+11111111
+11011111
+10101101
+11111010
+11111111`
+    ],
+  },
+
+
+
+
+
+  {
+    title: "Zelda? I Hardly Knew 'Er'",
+    author: "ducklingsmith",
+    prefix: "zelda-i-hardly-knew-er",
+    link: "https://ducklingsmith.itch.io/zelda-i-hardly-knew-er",
+    palette: {
+      background: "0,0,0",
+      tile: "27,0,254",
+      sprite: "3,255,1"
+    },
+    tileData: [
+      `00000000
+00100000
+01010000
+00000000
+00000000
+00000100
+00001010
+00000000
+>
+00000000
+00010000
+00101000
+00000000
+00000000
+00001000
+00010100
+00000000`
+    ],
+  },
+
+
+
+
+
+
+  {
+    title: "Randy G.'s Wild n' Wacky Beach Adventure'",
+    author: "Emma Dee",
+    prefix: "randy-g",
+    link: "https://emmadaues.itch.io/randyg",
+    palette: {
+      background: "255,235,221",
+      tile: "31,197,255",
+      sprite: "247,214,39"
+    },
+    tileData: [
+      `11111111
+11100111
+11011001
+11111111
+11111111
+11100111
+10011011
+11111111
+>
+11111111
+11001111
+10110011
+11111111
+11111111
+11110011
+11001101
+11111111`
+    ],
+  },
+
+
 ];
 
 
