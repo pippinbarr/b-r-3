@@ -82,3 +82,13 @@ The key observation for right now is that even with always placing the first til
 Remaining is to place the next 16 waters and then to hand place the tiles in the plinth view at the view least (quite possible in the gallery view too). I suspect it will be wise, as I noted in one commit, to save the room data etc. into the generator so that I can re-generate the game with the hand-placed versions in place in case something comes up.
 
 Lord knows not too many people are going to bother looking at this project, but I really think it's quite a lovely piece of work both in terms of its relationship to v r 3, to Unity versus Bitsy, and just to the general idea of a Bitsy community and practice. It's a winner.
+
+---
+
+# Water complete (Wednesday, 8 April 2020, 16:49PM)
+
+Officially have all the water in the game now, which didn't take as long as I'd been concerned in might. It looks nice, just like before. Also added the linking thing so that every plinth includes a link to the game the water actually comes from.
+
+Remaining is to curate the different waters, most obviously in the plinth view, but even in the gallery view, so that they match the way they appear in their respective games. I suppose that might be every so slightly boring, but it's also the kind of "good honest work" that I think can be an interesting component of this sort of project?
+
+I'm trying to understand whether it makes sense to save them into the generator (I seem to write that over and over), just in case I need to be able to generate and make some other tweaks. I suspect it's the right thing to do, and it won't cost all that much effort to do so I don't think? So I can make a start on that. Game should therefore be finished tomorrow-ish? Release next week?
