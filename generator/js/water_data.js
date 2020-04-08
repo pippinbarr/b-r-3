@@ -400,6 +400,212 @@ let waterData = [{
 
 
 
+
+
+
+
+
+
+  {
+    title: "almanac of girlswampwar territory & the _girls who swim as fertilizer through the warm soil cloaking the roots of the glorious tree of eugenics (giving birth to a black hole in a walmart parking lot at 1am)",
+    author: "porpentine charity heartscape",
+    prefix: "almanac-of-girlswampwar-territory",
+    link: "https://porpentine.itch.io/almanac",
+    palette: {
+      background: "33,140,138",
+      tile: "109,255,238",
+      sprite: "255,131,96"
+    },
+    tileData: [
+      `00000001
+11000110
+00111000
+00000000
+00001000
+00110110
+11000001
+00000000
+>
+00001000
+00110110
+11000001
+00000000
+00000001
+11000110
+00111000
+00000000`
+    ],
+  },
+
+
+
+
+
+
+
+
+  {
+    title: "racing...",
+    author: "onion",
+    prefix: "racing",
+    link: "https://le-onionboi.itch.io/racing",
+    palette: {
+      background: "255,180,221",
+      tile: "255,103,140",
+      sprite: "245,255,95"
+    },
+    tileData: [
+      `00000000
+00000000
+00000001
+10010010
+01101100
+00000000
+00000000
+00000000
+>
+00000000
+00000000
+10000000
+01001001
+00110110
+00000000
+00000000
+00000000`
+    ],
+  },
+
+
+
+
+
+
+
+
+  {
+    title: "Apology Quest",
+    author: "Fladagus",
+    prefix: "apology-quest",
+    link: "https://fladagus.itch.io/apology-quest",
+    palette: {
+      background: "0,0,0",
+      tile: "255,255,255",
+      sprite: "255,2,8"
+    },
+    tileData: [
+      `00000110
+00011001
+11100000
+00000000
+00000110
+00011001
+11100000
+00000000
+>
+01100000
+10011000
+00000111
+00000000
+01100000
+10011000
+00000111
+00000000`
+    ],
+  },
+
+
+
+
+
+
+
+  {
+    title: "Lakewood Forest",
+    author: "Josefsen",
+    prefix: "lakewood-forest",
+    link: "https://josefsen.itch.io/lakewood-forest",
+    palette: {
+      background: "40,125,84",
+      tile: "21,64,43",
+      sprite: "191,107,88"
+    },
+    tileData: [
+      `11111111
+11001111
+10110111
+11001111
+11111001
+11111111
+11100111
+11111111
+>
+11111111
+11100111
+11011011
+11100111
+11111100
+11111111
+11110011
+11111111`,
+      `11111111
+11111111
+11111111
+11111111
+11011101
+01110111
+11111111
+11111111
+>
+11111111
+11111111
+11111111
+11111111
+01110111
+11011101
+11111111
+11111111`
+    ],
+  },
+
+
+
+
+
+
+
+
+  {
+    title: "When I was a bubble I could talk with the trees",
+    author: "LostTrainDude",
+    prefix: "when-i-was-a-bubble",
+    link: "https://losttraindude.itch.io/when-i-was-a-bubble-i-could",
+    palette: {
+      background: "0,0,0",
+      tile: "255,255,255",
+      sprite: "255,255,255"
+    },
+    tileData: [
+      `10010011
+01001001
+01101100
+10011011
+01001001
+01100100
+11011110
+01001001
+>
+10010010
+01101111
+00100100
+10010010
+01111011
+00100110
+10010010
+11011001`
+    ],
+  },
+
+
 ];
 
 
