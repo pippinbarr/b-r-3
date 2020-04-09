@@ -92,3 +92,19 @@ Officially have all the water in the game now, which didn't take as long as I'd 
 Remaining is to curate the different waters, most obviously in the plinth view, but even in the gallery view, so that they match the way they appear in their respective games. I suppose that might be every so slightly boring, but it's also the kind of "good honest work" that I think can be an interesting component of this sort of project?
 
 I'm trying to understand whether it makes sense to save them into the generator (I seem to write that over and over), just in case I need to be able to generate and make some other tweaks. I suspect it's the right thing to do, and it won't cost all that much effort to do so I don't think? So I can make a start on that. Game should therefore be finished tomorrow-ish? Release next week?
+
+---
+
+# Full draft (Thursday, 9 April 2020, 13:49PM)
+
+I've sent the current state of the game to Jim and Mary for some thoughts and reactions, most obviously just to the usability of the experience. Particularly wonder whether people are able to find out that you can "zoom in" on the water with the eye and then leave that screen when desired... but it's pretty much just exploration? The sign probably helps though.
+
+All told I think the game is... quite nice. It functions in just the same way as v r 3, but interrogates a different system and a different relationship to water and its implementation. You can still see trends and stylistic differences throughout the water which is neat. It's also nice to have the actual games as reference points, you can understand the water better through its actual narrative context, which isn't something I was able to do in v r 3. I suppose this game has more the sense of art where the previous maybe was more trade show?
+
+So, now I wait for a bit of feedback and I release on Wednesday I think?
+
+So probably time to think about what's next? I haven't written a "closing statement" for a game since the Bitsy punishment game? Which was six games ago (seven if you were to count mobile chogue). That's not very professional.
+
+In fact, my whole documentation process has been pretty limited to process journals and to do lists and commit histories? Much less on the front of research questions and closing statements, which are just harder to do of course. But that doesn't mean they shouldn't be done. Perhaps, too, game making has just felt a bit harder to get through and this makes it harder to press on with more fiddly writing tasks at the same time?
+
+That said, I did write those book chapters this year, so that counts for something!
