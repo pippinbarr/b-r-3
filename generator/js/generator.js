@@ -279,18 +279,43 @@ function generate() {
   for (let i = 0; i < waterData.length; i++) {
     // Place water in plinth in gallery view
     let water = waterData[i];
+
     let galleryRoom = water.plinth.room;
     let x = water.plinth.x;
     let y = water.plinth.y - 1;
     let rows = galleryRoom.data.split(/\n/)
     let row = rows[y];
     let chars = row.split(/,/);
-    chars[x] = water.tileIDs[0];
-    chars[x + 1] = water.tileIDs[0];
+
+    if (water.prefix === "flotsam") {
+      chars[x] = water.tileIDs[0];
+      chars[x + 1] = water.tileIDs[1];
+    }
+    else if (water.prefix === "sandcastles") {
+      chars[x] = water.tileIDs[0];
+      chars[x + 1] = water.tileIDs[1];
+    }
+    else if (water.prefix === "lakewood-forest") {
+      chars[x] = water.tileIDs[0];
+      chars[x + 1] = water.tileIDs[1];
+    }
+    else {
+      chars[x] = water.tileIDs[0];
+      chars[x + 1] = water.tileIDs[0];
+    }
+
     row = chars.join(',');
     rows[y] = row;
     let newRoomData = rows.join('\n');
     water.plinth.room.data = newRoomData;
+
+
+    // If this water already has an artisinal version, use that instead
+    if (water.artisinalPlinthRoomData !== undefined) {
+      water.plinthRoom.data = water.artisinalPlinthRoomData;
+      continue;
+    }
+
 
     // Replace water in plinth room
     let plinthRoomData = water.plinthRoom.data;

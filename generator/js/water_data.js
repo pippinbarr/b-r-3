@@ -27,6 +27,22 @@ let waterData = [{
 11111111
 11111111`,
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,q,q,q,q,q,q,q,q,p,p,p,p
+p,p,p,p,r,r,r,r,r,r,r,r,p,p,p,p
+p,p,p,p,r,r,r,r,r,r,r,r,p,p,p,p
+p,p,p,p,r,r,r,r,r,r,r,r,p,p,p,p
+p,p,p,p,r,r,r,r,r,r,r,r,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -60,6 +76,22 @@ let waterData = [{
 00110010
 00000001`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,s,s,s,s,s,s,s,s,p,p,p,p
+p,p,p,p,s,s,s,s,s,s,s,s,p,p,p,p
+p,p,p,p,s,s,s,s,s,s,s,s,p,p,p,p
+p,p,p,p,s,s,s,s,s,s,s,s,p,p,p,p
+p,p,p,p,s,s,s,s,s,s,s,s,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -114,6 +146,22 @@ let waterData = [{
 00000000
 00000000`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,0,v,0,0,0,0,0,0,p,p,p,p
+p,p,p,p,0,0,0,0,v,0,u,0,p,p,p,p
+p,p,p,p,0,0,0,0,0,0,0,0,p,p,p,p
+p,p,p,p,0,0,u,0,0,v,0,0,p,p,p,p
+p,p,p,p,0,0,0,0,0,0,0,0,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -218,6 +266,22 @@ let waterData = [{
 11100011
 11111111`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,cc,cc,cc,cc,cc,cc,cc,cc,p,p,p,p
+p,p,p,p,cc,cc,z,cc,z,cc,z,cc,p,p,p,p
+p,p,p,p,z,cc,cc,cc,cc,z,cc,cc,p,p,p,p
+p,p,p,p,bb,bb,bb,bb,bb,bb,bb,bb,p,p,p,p
+p,p,p,p,x,y,x,y,x,y,x,y,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -252,6 +316,22 @@ let waterData = [{
 00000000
 00000000`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,dd,0,dd,0,dd,dd,0,dd,p,p,p,p
+p,p,p,p,dd,dd,0,dd,0,dd,dd,0,p,p,p,p
+p,p,p,p,dd,dd,dd,0,dd,0,dd,dd,p,p,p,p
+p,p,p,p,0,dd,dd,dd,0,dd,0,dd,p,p,p,p
+p,p,p,p,dd,0,dd,dd,dd,0,dd,0,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -288,6 +368,22 @@ let waterData = [{
 11111111
 11111111`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,ff,ff,ff,gg,ff,gg,ff,gg,p,p,p,p
+p,p,p,p,gg,gg,ff,ff,gg,ff,ff,ff,p,p,p,p
+p,p,p,p,ff,gg,ff,ff,gg,gg,ff,ff,p,p,p,p
+p,p,p,p,ff,gg,gg,ff,gg,ff,ff,gg,p,p,p,p
+p,p,p,p,ff,ff,ff,ff,gg,ff,gg,ff,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -324,6 +420,22 @@ let waterData = [{
 00000000
 11111111`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,hh,hh,hh,hh,hh,hh,hh,hh,p,p,p,p
+p,p,p,p,hh,hh,hh,hh,hh,hh,hh,hh,p,p,p,p
+p,p,p,p,hh,hh,hh,hh,hh,hh,hh,hh,p,p,p,p
+p,p,p,p,hh,hh,hh,hh,hh,hh,hh,hh,p,p,p,p
+p,p,p,p,hh,hh,hh,hh,hh,hh,hh,hh,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -360,6 +472,22 @@ let waterData = [{
 00000000
 00000000`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,jj,0,0,jj,0,0,0,jj,p,p,p,p
+p,p,p,p,jj,0,jj,0,0,jj,0,0,p,p,p,p
+p,p,p,p,jj,0,jj,0,0,jj,0,0,p,p,p,p
+p,p,p,p,0,0,0,0,0,jj,0,jj,p,p,p,p
+p,p,p,p,0,jj,0,0,jj,0,0,jj,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -396,6 +524,22 @@ let waterData = [{
 00111100
 11000011`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,ll,ll,0,0,0,0,ll,ll,p,p,p,p
+p,p,p,p,0,0,0,0,ll,ll,0,0,p,p,p,p
+p,p,p,p,ll,ll,ll,0,0,0,ll,ll,p,p,p,p
+p,p,p,p,0,0,0,ll,ll,0,0,0,p,p,p,p
+p,p,p,p,0,0,0,0,0,0,0,0,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -435,6 +579,22 @@ let waterData = [{
 00111000
 00000000`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,nn,nn,nn,nn,nn,nn,nn,nn,p,p,p,p
+p,p,p,p,nn,nn,nn,nn,nn,nn,nn,nn,p,p,p,p
+p,p,p,p,nn,nn,nn,nn,nn,nn,nn,nn,p,p,p,p
+p,p,p,p,nn,nn,nn,nn,nn,nn,nn,nn,p,p,p,p
+p,p,p,p,nn,nn,nn,nn,nn,nn,nn,nn,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -473,6 +633,22 @@ let waterData = [{
 00000000
 00000000`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,0,0,0,pp,pp,pp,0,0,p,p,p,p
+p,p,p,p,pp,pp,0,0,0,0,pp,pp,p,p,p,p
+p,p,p,p,pp,0,0,0,pp,pp,0,0,p,p,p,p
+p,p,p,p,0,0,pp,pp,pp,0,0,pp,p,p,p,p
+p,p,p,p,pp,pp,0,0,0,pp,pp,0,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -511,6 +687,22 @@ let waterData = [{
 00000111
 00000000`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,rr,rr,rr,rr,rr,rr,rr,rr,p,p,p,p
+p,p,p,p,rr,rr,rr,rr,rr,rr,rr,rr,p,p,p,p
+p,p,p,p,rr,rr,rr,rr,rr,rr,rr,rr,p,p,p,p
+p,p,p,p,rr,rr,rr,rr,rr,rr,rr,rr,p,p,p,p
+p,p,p,p,rr,rr,rr,rr,rr,rr,rr,rr,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -565,6 +757,22 @@ let waterData = [{
 11111111
 11111111`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,vv,vv,vv,uu,vv,vv,tt,vv,p,p,p,p
+p,p,p,p,vv,tt,vv,vv,vv,vv,vv,vv,p,p,p,p
+p,p,p,p,vv,vv,vv,vv,vv,uu,vv,vv,p,p,p,p
+p,p,p,p,vv,uu,vv,vv,vv,vv,vv,vv,p,p,p,p
+p,p,p,p,vv,vv,vv,vv,vv,tt,vv,vv,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -603,6 +811,22 @@ let waterData = [{
 10010010
 11011001`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,ww,ww,ww,ww,ww,ww,ww,ww,p,p,p,p
+p,p,p,p,ww,ww,ww,ww,ww,ww,ww,ww,p,p,p,p
+p,p,p,p,ww,ww,ww,ww,ww,ww,ww,ww,p,p,p,p
+p,p,p,p,ww,ww,ww,ww,ww,ww,ww,ww,p,p,p,p
+p,p,p,p,ww,ww,ww,ww,ww,ww,ww,ww,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -641,6 +865,22 @@ let waterData = [{
 00010001
 00100010`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,yy,yy,yy,yy,yy,yy,yy,yy,p,p,p,p
+p,p,p,p,yy,yy,yy,yy,yy,yy,yy,yy,p,p,p,p
+p,p,p,p,yy,yy,yy,yy,yy,yy,yy,yy,p,p,p,p
+p,p,p,p,yy,yy,yy,yy,yy,yy,yy,yy,p,p,p,p
+p,p,p,p,yy,yy,yy,yy,yy,yy,yy,yy,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -666,6 +906,22 @@ let waterData = [{
 11111010
 11111111`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,aaa,aaa,aaa,aaa,aaa,aaa,aaa,aaa,p,p,p,p
+p,p,p,p,aaa,aaa,aaa,aaa,aaa,aaa,aaa,aaa,p,p,p,p
+p,p,p,p,aaa,aaa,aaa,aaa,aaa,aaa,aaa,aaa,p,p,p,p
+p,p,p,p,aaa,aaa,aaa,aaa,aaa,aaa,aaa,aaa,p,p,p,p
+p,p,p,p,aaa,aaa,aaa,aaa,aaa,aaa,aaa,aaa,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -701,6 +957,22 @@ let waterData = [{
 00010100
 00000000`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,p,p,p,p
+p,p,p,p,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,p,p,p,p
+p,p,p,p,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,p,p,p,p
+p,p,p,p,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,p,p,p,p
+p,p,p,p,ccc,ccc,ccc,ccc,ccc,ccc,ccc,ccc,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -737,6 +1009,22 @@ let waterData = [{
 11001101
 11111111`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,fff,fff,eee,fff,fff,fff,eee,fff,p,p,p,p
+p,p,p,p,fff,eee,fff,eee,fff,fff,fff,fff,p,p,p,p
+p,p,p,p,fff,fff,eee,fff,fff,eee,fff,fff,p,p,p,p
+p,p,p,p,fff,eee,fff,eee,fff,fff,fff,fff,p,p,p,p
+p,p,p,p,fff,fff,fff,fff,fff,fff,fff,eee,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -789,6 +1077,22 @@ let waterData = [{
 11110001
 00001110`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,ggg,ggg,ggg,ggg,ggg,ggg,ggg,ggg,p,p,p,p
+p,p,p,p,hhh,hhh,ggg,hhh,hhh,hhh,hhh,hhh,p,p,p,p
+p,p,p,p,ggg,ggg,ggg,ggg,ggg,ggg,ggg,ggg,p,p,p,p
+p,p,p,p,hhh,hhh,hhh,hhh,hhh,hhh,hhh,hhh,p,p,p,p
+p,p,p,p,ggg,ggg,ggg,ggg,ggg,ggg,ggg,ggg,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -823,6 +1127,22 @@ let waterData = [{
 11111111
 11111111`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,jjj,jjj,jjj,jjj,jjj,jjj,jjj,jjj,p,p,p,p
+p,p,p,p,kkk,kkk,kkk,kkk,kkk,kkk,kkk,kkk,p,p,p,p
+p,p,p,p,kkk,kkk,kkk,kkk,kkk,kkk,kkk,kkk,p,p,p,p
+p,p,p,p,kkk,kkk,kkk,kkk,kkk,kkk,kkk,kkk,p,p,p,p
+p,p,p,p,kkk,kkk,kkk,kkk,kkk,kkk,kkk,kkk,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -858,6 +1178,22 @@ let waterData = [{
 01100110
 00000000`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,lll,lll,lll,lll,lll,lll,lll,lll,p,p,p,p
+p,p,p,p,lll,lll,lll,lll,lll,lll,lll,lll,p,p,p,p
+p,p,p,p,lll,lll,lll,lll,lll,lll,lll,lll,p,p,p,p
+p,p,p,p,lll,lll,lll,lll,lll,lll,lll,lll,p,p,p,p
+p,p,p,p,lll,lll,lll,lll,lll,lll,lll,lll,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -908,6 +1244,22 @@ let waterData = [{
 00000110
 00000000`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,nnn,0,nnn,ooo,0,ooo,ooo,0,p,p,p,p
+p,p,p,p,nnn,0,nnn,nnn,ooo,ooo,0,ooo,p,p,p,p
+p,p,p,p,nnn,ooo,ooo,ooo,ooo,nnn,0,ooo,p,p,p,p
+p,p,p,p,nnn,0,0,ooo,ooo,nnn,0,0,p,p,p,p
+p,p,p,p,0,ooo,0,0,0,ooo,ooo,ooo,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -1013,6 +1365,22 @@ let waterData = [{
 10010110
 01001000`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,uuu,uuu,uuu,uuu,uuu,uuu,uuu,uuu,p,p,p,p
+p,p,p,p,ttt,ttt,ttt,ttt,ttt,ttt,ttt,ttt,p,p,p,p
+p,p,p,p,rrr,rrr,rrr,rrr,rrr,rrr,rrr,rrr,p,p,p,p
+p,p,p,p,qqq,qqq,qqq,qqq,qqq,qqq,qqq,qqq,p,p,p,p
+p,p,p,p,qqq,qqq,qqq,qqq,qqq,qqq,qqq,qqq,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
@@ -1086,6 +1454,22 @@ let waterData = [{
 01001101
 00000010`
     ],
+    artisinalPlinthRoomData: `p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
+p,p,p,p,0,www,xxx,0,0,yyy,www,www,p,p,p,p
+p,p,p,p,www,www,0,www,0,0,0,www,p,p,p,p
+p,p,p,p,0,yyy,www,0,yyy,www,xxx,0,p,p,p,p
+p,p,p,p,0,0,0,0,0,0,0,www,p,p,p,p
+p,p,p,p,www,www,xxx,0,0,www,xxx,0,p,p,p,p
+p,p,p,p,n,m,m,m,m,m,m,o,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p
+p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
   },
 
 
