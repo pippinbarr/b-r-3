@@ -25,8 +25,8 @@ function generate() {
   let mainPalette = {
     id: 0,
     name: "default-palette",
-    background: "183,180,183",
-    tile: "70,93,213",
+    background: "170,187,255",
+    tile: "85,85,255",
     sprite: "255,255,255"
   }
 
@@ -343,6 +343,18 @@ function generate() {
     }
   });
 
+  sprites.push({
+    id: getNextSpriteSymbol(),
+    name: `sign`,
+    data: signSpriteData,
+    dialog: `sign-dialog`,
+    position: {
+      room: 24,
+      x: 6,
+      y: 11
+    }
+  });
+
   // SPRITES
 
   // GENERATE WIDE VIEW PLINTHS
@@ -365,6 +377,11 @@ function generate() {
     dialog.push(getDialog(waterData[i]));
     dialog.push(getLinkDialog(waterData[i]));
   }
+
+  dialog.push({
+    name: `sign-dialog`,
+    text: signText
+  });
 
   // CONSTRUCT OUTPUT
   let output = '';

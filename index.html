@@ -17,8 +17,8 @@ b r 3
 
 PAL 0
 NAME default-palette
-183,180,183
-70,93,213
+170,187,255
+85,85,255
 255,255,255
 
 PAL 1
@@ -1922,14 +1922,15 @@ NAME plinth-close-ne-corner
 WAL false
 
 TIL p
+01010101
 00000000
-00010000
-00000001
+01010101
 00000000
-10000000
-00000100
+01010101
 00000000
-NaNNaNNaNNaNNaNNaNNaNNaN
+01010101
+00000000
+NAME plinth-room-bg
 WAL false
 
 TIL q
@@ -3019,9 +3020,22 @@ SPR A
 00111100
 00000000
 NAME avatar
-POS 24 7,13
+POS 24 7,12
 
 SPR a
+00000000
+11111111
+10000001
+10000001
+10000001
+11111111
+00011000
+00011000
+NAME sign
+DLG sign-dialog
+POS 24 6,11
+
+SPR b
 11111111
 11111100
 11111100
@@ -3034,7 +3048,7 @@ NAME the-world-has-been-sad-since-tuesday-wide-plinth-left
 DLG the-world-has-been-sad-since-tuesday-dialog
 POS 27 3,7
 
-SPR b
+SPR c
 11111111
 00111111
 00111111
@@ -3047,7 +3061,7 @@ NAME the-world-has-been-sad-since-tuesday-wide-plinth-right
 DLG the-world-has-been-sad-since-tuesday-dialog
 POS 27 4,7
 
-SPR c
+SPR d
 11111111
 11111100
 11111100
@@ -3060,7 +3074,7 @@ NAME everything-must-fall-wide-plinth-left
 DLG everything-must-fall-dialog
 POS 27 7,7
 
-SPR d
+SPR e
 11111111
 00111111
 00111111
@@ -3073,7 +3087,7 @@ NAME everything-must-fall-wide-plinth-right
 DLG everything-must-fall-dialog
 POS 27 8,7
 
-SPR e
+SPR f
 11111111
 11111100
 11111100
@@ -3086,7 +3100,7 @@ NAME flotsam-wide-plinth-left
 DLG flotsam-dialog
 POS 27 11,7
 
-SPR f
+SPR g
 11111111
 00111111
 00111111
@@ -3099,7 +3113,7 @@ NAME flotsam-wide-plinth-right
 DLG flotsam-dialog
 POS 27 12,7
 
-SPR g
+SPR h
 11111111
 11111100
 11111100
@@ -3112,7 +3126,7 @@ NAME sandcastles-wide-plinth-left
 DLG sandcastles-dialog
 POS 27 3,4
 
-SPR h
+SPR i
 11111111
 00111111
 00111111
@@ -3125,7 +3139,7 @@ NAME sandcastles-wide-plinth-right
 DLG sandcastles-dialog
 POS 27 4,4
 
-SPR i
+SPR j
 11111111
 11111100
 11111100
@@ -3138,7 +3152,7 @@ NAME thing-in-the-lake-wide-plinth-left
 DLG thing-in-the-lake-dialog
 POS 27 7,4
 
-SPR j
+SPR k
 11111111
 00111111
 00111111
@@ -3151,7 +3165,7 @@ NAME thing-in-the-lake-wide-plinth-right
 DLG thing-in-the-lake-dialog
 POS 27 8,4
 
-SPR k
+SPR l
 11111111
 11111100
 11111100
@@ -3164,7 +3178,7 @@ NAME seven-simple-wonders-wide-plinth-left
 DLG seven-simple-wonders-dialog
 POS 27 11,4
 
-SPR l
+SPR m
 11111111
 00111111
 00111111
@@ -3177,7 +3191,7 @@ NAME seven-simple-wonders-wide-plinth-right
 DLG seven-simple-wonders-dialog
 POS 27 12,4
 
-SPR m
+SPR n
 11111111
 11111100
 11111100
@@ -3190,7 +3204,7 @@ NAME fiddlers-island-wide-plinth-left
 DLG fiddlers-island-dialog
 POS 28 3,13
 
-SPR n
+SPR o
 11111111
 00111111
 00111111
@@ -3203,7 +3217,7 @@ NAME fiddlers-island-wide-plinth-right
 DLG fiddlers-island-dialog
 POS 28 4,13
 
-SPR o
+SPR p
 11111111
 11111100
 11111100
@@ -3216,7 +3230,7 @@ NAME princess-peppercorn-wide-plinth-left
 DLG princess-peppercorn-dialog
 POS 28 7,13
 
-SPR p
+SPR q
 11111111
 00111111
 00111111
@@ -3229,7 +3243,7 @@ NAME princess-peppercorn-wide-plinth-right
 DLG princess-peppercorn-dialog
 POS 28 8,13
 
-SPR q
+SPR r
 11111111
 11111100
 11111100
@@ -3242,7 +3256,7 @@ NAME stranger-point-wide-plinth-left
 DLG stranger-point-dialog
 POS 28 11,13
 
-SPR r
+SPR s
 11111111
 00111111
 00111111
@@ -3255,7 +3269,7 @@ NAME stranger-point-wide-plinth-right
 DLG stranger-point-dialog
 POS 28 12,13
 
-SPR s
+SPR t
 11111111
 11111100
 11111100
@@ -3268,7 +3282,7 @@ NAME almanac-of-girlswampwar-territory-wide-plinth-left
 DLG almanac-of-girlswampwar-territory-dialog
 POS 28 3,10
 
-SPR t
+SPR u
 11111111
 00111111
 00111111
@@ -3281,7 +3295,7 @@ NAME almanac-of-girlswampwar-territory-wide-plinth-right
 DLG almanac-of-girlswampwar-territory-dialog
 POS 28 4,10
 
-SPR u
+SPR v
 11111111
 11111100
 11111100
@@ -3294,7 +3308,7 @@ NAME racing-wide-plinth-left
 DLG racing-dialog
 POS 28 7,10
 
-SPR v
+SPR w
 11111111
 00111111
 00111111
@@ -3307,7 +3321,7 @@ NAME racing-wide-plinth-right
 DLG racing-dialog
 POS 28 8,10
 
-SPR w
+SPR x
 11111111
 11111100
 11111100
@@ -3320,7 +3334,7 @@ NAME apology-quest-wide-plinth-left
 DLG apology-quest-dialog
 POS 28 11,10
 
-SPR x
+SPR y
 11111111
 00111111
 00111111
@@ -3333,7 +3347,7 @@ NAME apology-quest-wide-plinth-right
 DLG apology-quest-dialog
 POS 28 12,10
 
-SPR y
+SPR z
 11111111
 11111100
 11111100
@@ -3346,7 +3360,7 @@ NAME lakewood-forest-wide-plinth-left
 DLG lakewood-forest-dialog
 POS 28 3,7
 
-SPR z
+SPR aa
 11111111
 00111111
 00111111
@@ -3359,7 +3373,7 @@ NAME lakewood-forest-wide-plinth-right
 DLG lakewood-forest-dialog
 POS 28 4,7
 
-SPR aa
+SPR bb
 11111111
 11111100
 11111100
@@ -3372,7 +3386,7 @@ NAME when-i-was-a-bubble-wide-plinth-left
 DLG when-i-was-a-bubble-dialog
 POS 28 7,7
 
-SPR bb
+SPR cc
 11111111
 00111111
 00111111
@@ -3385,7 +3399,7 @@ NAME when-i-was-a-bubble-wide-plinth-right
 DLG when-i-was-a-bubble-dialog
 POS 28 8,7
 
-SPR cc
+SPR dd
 11111111
 11111100
 11111100
@@ -3398,7 +3412,7 @@ NAME eggway-dreams-wide-plinth-left
 DLG eggway-dreams-dialog
 POS 28 11,7
 
-SPR dd
+SPR ee
 11111111
 00111111
 00111111
@@ -3411,7 +3425,7 @@ NAME eggway-dreams-wide-plinth-right
 DLG eggway-dreams-dialog
 POS 28 12,7
 
-SPR ee
+SPR ff
 11111111
 11111100
 11111100
@@ -3424,7 +3438,7 @@ NAME talkative-plants-wide-plinth-left
 DLG talkative-plants-dialog
 POS 28 3,4
 
-SPR ff
+SPR gg
 11111111
 00111111
 00111111
@@ -3437,7 +3451,7 @@ NAME talkative-plants-wide-plinth-right
 DLG talkative-plants-dialog
 POS 28 4,4
 
-SPR gg
+SPR hh
 11111111
 11111100
 11111100
@@ -3450,7 +3464,7 @@ NAME zelda-i-hardly-knew-er-wide-plinth-left
 DLG zelda-i-hardly-knew-er-dialog
 POS 28 7,4
 
-SPR hh
+SPR ii
 11111111
 00111111
 00111111
@@ -3463,7 +3477,7 @@ NAME zelda-i-hardly-knew-er-wide-plinth-right
 DLG zelda-i-hardly-knew-er-dialog
 POS 28 8,4
 
-SPR ii
+SPR jj
 11111111
 11111100
 11111100
@@ -3476,7 +3490,7 @@ NAME randy-g-wide-plinth-left
 DLG randy-g-dialog
 POS 28 11,4
 
-SPR jj
+SPR kk
 11111111
 00111111
 00111111
@@ -3489,7 +3503,7 @@ NAME randy-g-wide-plinth-right
 DLG randy-g-dialog
 POS 28 12,4
 
-SPR kk
+SPR ll
 11111111
 11111100
 11111100
@@ -3502,7 +3516,7 @@ NAME an-evening-stroll-wide-plinth-left
 DLG an-evening-stroll-dialog
 POS 29 3,13
 
-SPR ll
+SPR mm
 11111111
 00111111
 00111111
@@ -3515,7 +3529,7 @@ NAME an-evening-stroll-wide-plinth-right
 DLG an-evening-stroll-dialog
 POS 29 4,13
 
-SPR mm
+SPR nn
 11111111
 11111100
 11111100
@@ -3528,7 +3542,7 @@ NAME once-i-was-an-egg-wide-plinth-left
 DLG once-i-was-an-egg-dialog
 POS 29 7,13
 
-SPR nn
+SPR oo
 11111111
 00111111
 00111111
@@ -3541,7 +3555,7 @@ NAME once-i-was-an-egg-wide-plinth-right
 DLG once-i-was-an-egg-dialog
 POS 29 8,13
 
-SPR oo
+SPR pp
 11111111
 11111100
 11111100
@@ -3554,7 +3568,7 @@ NAME stream-explorer-wide-plinth-left
 DLG stream-explorer-dialog
 POS 29 11,13
 
-SPR pp
+SPR qq
 11111111
 00111111
 00111111
@@ -3567,7 +3581,7 @@ NAME stream-explorer-wide-plinth-right
 DLG stream-explorer-dialog
 POS 29 12,13
 
-SPR qq
+SPR rr
 11111111
 11111100
 11111100
@@ -3580,7 +3594,7 @@ NAME silverybield-foss-wide-plinth-left
 DLG silverybield-foss-dialog
 POS 29 3,10
 
-SPR rr
+SPR ss
 11111111
 00111111
 00111111
@@ -3593,7 +3607,7 @@ NAME silverybield-foss-wide-plinth-right
 DLG silverybield-foss-dialog
 POS 29 4,10
 
-SPR ss
+SPR tt
 11111111
 11111100
 11111100
@@ -3606,7 +3620,7 @@ NAME breathe-in-wide-plinth-left
 DLG breathe-in-dialog
 POS 29 7,10
 
-SPR tt
+SPR uu
 11111111
 00111111
 00111111
@@ -3619,7 +3633,7 @@ NAME breathe-in-wide-plinth-right
 DLG breathe-in-dialog
 POS 29 8,10
 
-SPR uu
+SPR vv
 11111111
 11111100
 11111100
@@ -3632,7 +3646,7 @@ NAME beachcombing-wide-plinth-left
 DLG beachcombing-dialog
 POS 29 11,10
 
-SPR vv
+SPR ww
 11111111
 00111111
 00111111
@@ -3645,7 +3659,7 @@ NAME beachcombing-wide-plinth-right
 DLG beachcombing-dialog
 POS 29 12,10
 
-SPR ww
+SPR xx
 11111111
 10000000
 10000000
@@ -3658,7 +3672,7 @@ NAME the-world-has-been-sad-since-tuesday-plinth-label-left
 DLG the-world-has-been-sad-since-tuesday-dialog
 POS 0 7,10
 
-SPR xx
+SPR yy
 11111111
 00000001
 00000001
@@ -3671,7 +3685,7 @@ NAME the-world-has-been-sad-since-tuesday-plinth-label-right
 DLG the-world-has-been-sad-since-tuesday-dialog
 POS 0 8,10
 
-SPR yy
+SPR zz
 00000000
 00000000
 01100110
@@ -3684,7 +3698,7 @@ NAME the-world-has-been-sad-since-tuesday-plinth-link
 DLG the-world-has-been-sad-since-tuesday-link-dialog
 POS 0 10,10
 
-SPR zz
+SPR aaa
 11111111
 10000000
 10000000
@@ -3697,7 +3711,7 @@ NAME everything-must-fall-plinth-label-left
 DLG everything-must-fall-dialog
 POS 1 7,10
 
-SPR aaa
+SPR bbb
 11111111
 00000001
 00000001
@@ -3710,7 +3724,7 @@ NAME everything-must-fall-plinth-label-right
 DLG everything-must-fall-dialog
 POS 1 8,10
 
-SPR bbb
+SPR ccc
 00000000
 00000000
 01100110
@@ -3723,7 +3737,7 @@ NAME everything-must-fall-plinth-link
 DLG everything-must-fall-link-dialog
 POS 1 10,10
 
-SPR ccc
+SPR ddd
 11111111
 10000000
 10000000
@@ -3736,7 +3750,7 @@ NAME flotsam-plinth-label-left
 DLG flotsam-dialog
 POS 2 7,10
 
-SPR ddd
+SPR eee
 11111111
 00000001
 00000001
@@ -3749,7 +3763,7 @@ NAME flotsam-plinth-label-right
 DLG flotsam-dialog
 POS 2 8,10
 
-SPR eee
+SPR fff
 00000000
 00000000
 01100110
@@ -3762,7 +3776,7 @@ NAME flotsam-plinth-link
 DLG flotsam-link-dialog
 POS 2 10,10
 
-SPR fff
+SPR ggg
 11111111
 10000000
 10000000
@@ -3775,7 +3789,7 @@ NAME sandcastles-plinth-label-left
 DLG sandcastles-dialog
 POS 3 7,10
 
-SPR ggg
+SPR hhh
 11111111
 00000001
 00000001
@@ -3788,7 +3802,7 @@ NAME sandcastles-plinth-label-right
 DLG sandcastles-dialog
 POS 3 8,10
 
-SPR hhh
+SPR iii
 00000000
 00000000
 01100110
@@ -3801,7 +3815,7 @@ NAME sandcastles-plinth-link
 DLG sandcastles-link-dialog
 POS 3 10,10
 
-SPR iii
+SPR jjj
 11111111
 10000000
 10000000
@@ -3814,7 +3828,7 @@ NAME thing-in-the-lake-plinth-label-left
 DLG thing-in-the-lake-dialog
 POS 4 7,10
 
-SPR jjj
+SPR kkk
 11111111
 00000001
 00000001
@@ -3827,7 +3841,7 @@ NAME thing-in-the-lake-plinth-label-right
 DLG thing-in-the-lake-dialog
 POS 4 8,10
 
-SPR kkk
+SPR lll
 00000000
 00000000
 01100110
@@ -3840,7 +3854,7 @@ NAME thing-in-the-lake-plinth-link
 DLG thing-in-the-lake-link-dialog
 POS 4 10,10
 
-SPR lll
+SPR mmm
 11111111
 10000000
 10000000
@@ -3853,7 +3867,7 @@ NAME seven-simple-wonders-plinth-label-left
 DLG seven-simple-wonders-dialog
 POS 5 7,10
 
-SPR mmm
+SPR nnn
 11111111
 00000001
 00000001
@@ -3866,7 +3880,7 @@ NAME seven-simple-wonders-plinth-label-right
 DLG seven-simple-wonders-dialog
 POS 5 8,10
 
-SPR nnn
+SPR ooo
 00000000
 00000000
 01100110
@@ -3879,7 +3893,7 @@ NAME seven-simple-wonders-plinth-link
 DLG seven-simple-wonders-link-dialog
 POS 5 10,10
 
-SPR ooo
+SPR ppp
 11111111
 10000000
 10000000
@@ -3892,7 +3906,7 @@ NAME fiddlers-island-plinth-label-left
 DLG fiddlers-island-dialog
 POS 6 7,10
 
-SPR ppp
+SPR qqq
 11111111
 00000001
 00000001
@@ -3905,7 +3919,7 @@ NAME fiddlers-island-plinth-label-right
 DLG fiddlers-island-dialog
 POS 6 8,10
 
-SPR qqq
+SPR rrr
 00000000
 00000000
 01100110
@@ -3918,7 +3932,7 @@ NAME fiddlers-island-plinth-link
 DLG fiddlers-island-link-dialog
 POS 6 10,10
 
-SPR rrr
+SPR sss
 11111111
 10000000
 10000000
@@ -3931,7 +3945,7 @@ NAME princess-peppercorn-plinth-label-left
 DLG princess-peppercorn-dialog
 POS 7 7,10
 
-SPR sss
+SPR ttt
 11111111
 00000001
 00000001
@@ -3944,7 +3958,7 @@ NAME princess-peppercorn-plinth-label-right
 DLG princess-peppercorn-dialog
 POS 7 8,10
 
-SPR ttt
+SPR uuu
 00000000
 00000000
 01100110
@@ -3957,7 +3971,7 @@ NAME princess-peppercorn-plinth-link
 DLG princess-peppercorn-link-dialog
 POS 7 10,10
 
-SPR uuu
+SPR vvv
 11111111
 10000000
 10000000
@@ -3970,7 +3984,7 @@ NAME stranger-point-plinth-label-left
 DLG stranger-point-dialog
 POS 8 7,10
 
-SPR vvv
+SPR www
 11111111
 00000001
 00000001
@@ -3983,7 +3997,7 @@ NAME stranger-point-plinth-label-right
 DLG stranger-point-dialog
 POS 8 8,10
 
-SPR www
+SPR xxx
 00000000
 00000000
 01100110
@@ -3996,7 +4010,7 @@ NAME stranger-point-plinth-link
 DLG stranger-point-link-dialog
 POS 8 10,10
 
-SPR xxx
+SPR yyy
 11111111
 10000000
 10000000
@@ -4009,7 +4023,7 @@ NAME almanac-of-girlswampwar-territory-plinth-label-left
 DLG almanac-of-girlswampwar-territory-dialog
 POS 9 7,10
 
-SPR yyy
+SPR zzz
 11111111
 00000001
 00000001
@@ -4022,7 +4036,7 @@ NAME almanac-of-girlswampwar-territory-plinth-label-right
 DLG almanac-of-girlswampwar-territory-dialog
 POS 9 8,10
 
-SPR zzz
+SPR aaaa
 00000000
 00000000
 01100110
@@ -4035,7 +4049,7 @@ NAME almanac-of-girlswampwar-territory-plinth-link
 DLG almanac-of-girlswampwar-territory-link-dialog
 POS 9 10,10
 
-SPR aaaa
+SPR bbbb
 11111111
 10000000
 10000000
@@ -4048,7 +4062,7 @@ NAME racing-plinth-label-left
 DLG racing-dialog
 POS 10 7,10
 
-SPR bbbb
+SPR cccc
 11111111
 00000001
 00000001
@@ -4061,7 +4075,7 @@ NAME racing-plinth-label-right
 DLG racing-dialog
 POS 10 8,10
 
-SPR cccc
+SPR dddd
 00000000
 00000000
 01100110
@@ -4074,7 +4088,7 @@ NAME racing-plinth-link
 DLG racing-link-dialog
 POS 10 10,10
 
-SPR dddd
+SPR eeee
 11111111
 10000000
 10000000
@@ -4087,7 +4101,7 @@ NAME apology-quest-plinth-label-left
 DLG apology-quest-dialog
 POS 11 7,10
 
-SPR eeee
+SPR ffff
 11111111
 00000001
 00000001
@@ -4100,7 +4114,7 @@ NAME apology-quest-plinth-label-right
 DLG apology-quest-dialog
 POS 11 8,10
 
-SPR ffff
+SPR gggg
 00000000
 00000000
 01100110
@@ -4113,7 +4127,7 @@ NAME apology-quest-plinth-link
 DLG apology-quest-link-dialog
 POS 11 10,10
 
-SPR gggg
+SPR hhhh
 11111111
 10000000
 10000000
@@ -4126,7 +4140,7 @@ NAME lakewood-forest-plinth-label-left
 DLG lakewood-forest-dialog
 POS 12 7,10
 
-SPR hhhh
+SPR iiii
 11111111
 00000001
 00000001
@@ -4139,7 +4153,7 @@ NAME lakewood-forest-plinth-label-right
 DLG lakewood-forest-dialog
 POS 12 8,10
 
-SPR iiii
+SPR jjjj
 00000000
 00000000
 01100110
@@ -4152,7 +4166,7 @@ NAME lakewood-forest-plinth-link
 DLG lakewood-forest-link-dialog
 POS 12 10,10
 
-SPR jjjj
+SPR kkkk
 11111111
 10000000
 10000000
@@ -4165,7 +4179,7 @@ NAME when-i-was-a-bubble-plinth-label-left
 DLG when-i-was-a-bubble-dialog
 POS 13 7,10
 
-SPR kkkk
+SPR llll
 11111111
 00000001
 00000001
@@ -4178,7 +4192,7 @@ NAME when-i-was-a-bubble-plinth-label-right
 DLG when-i-was-a-bubble-dialog
 POS 13 8,10
 
-SPR llll
+SPR mmmm
 00000000
 00000000
 01100110
@@ -4191,7 +4205,7 @@ NAME when-i-was-a-bubble-plinth-link
 DLG when-i-was-a-bubble-link-dialog
 POS 13 10,10
 
-SPR mmmm
+SPR nnnn
 11111111
 10000000
 10000000
@@ -4204,7 +4218,7 @@ NAME eggway-dreams-plinth-label-left
 DLG eggway-dreams-dialog
 POS 14 7,10
 
-SPR nnnn
+SPR oooo
 11111111
 00000001
 00000001
@@ -4217,7 +4231,7 @@ NAME eggway-dreams-plinth-label-right
 DLG eggway-dreams-dialog
 POS 14 8,10
 
-SPR oooo
+SPR pppp
 00000000
 00000000
 01100110
@@ -4230,7 +4244,7 @@ NAME eggway-dreams-plinth-link
 DLG eggway-dreams-link-dialog
 POS 14 10,10
 
-SPR pppp
+SPR qqqq
 11111111
 10000000
 10000000
@@ -4243,7 +4257,7 @@ NAME talkative-plants-plinth-label-left
 DLG talkative-plants-dialog
 POS 15 7,10
 
-SPR qqqq
+SPR rrrr
 11111111
 00000001
 00000001
@@ -4256,7 +4270,7 @@ NAME talkative-plants-plinth-label-right
 DLG talkative-plants-dialog
 POS 15 8,10
 
-SPR rrrr
+SPR ssss
 00000000
 00000000
 01100110
@@ -4269,7 +4283,7 @@ NAME talkative-plants-plinth-link
 DLG talkative-plants-link-dialog
 POS 15 10,10
 
-SPR ssss
+SPR tttt
 11111111
 10000000
 10000000
@@ -4282,7 +4296,7 @@ NAME zelda-i-hardly-knew-er-plinth-label-left
 DLG zelda-i-hardly-knew-er-dialog
 POS 16 7,10
 
-SPR tttt
+SPR uuuu
 11111111
 00000001
 00000001
@@ -4295,7 +4309,7 @@ NAME zelda-i-hardly-knew-er-plinth-label-right
 DLG zelda-i-hardly-knew-er-dialog
 POS 16 8,10
 
-SPR uuuu
+SPR vvvv
 00000000
 00000000
 01100110
@@ -4308,7 +4322,7 @@ NAME zelda-i-hardly-knew-er-plinth-link
 DLG zelda-i-hardly-knew-er-link-dialog
 POS 16 10,10
 
-SPR vvvv
+SPR wwww
 11111111
 10000000
 10000000
@@ -4321,7 +4335,7 @@ NAME randy-g-plinth-label-left
 DLG randy-g-dialog
 POS 17 7,10
 
-SPR wwww
+SPR xxxx
 11111111
 00000001
 00000001
@@ -4334,7 +4348,7 @@ NAME randy-g-plinth-label-right
 DLG randy-g-dialog
 POS 17 8,10
 
-SPR xxxx
+SPR yyyy
 00000000
 00000000
 01100110
@@ -4347,7 +4361,7 @@ NAME randy-g-plinth-link
 DLG randy-g-link-dialog
 POS 17 10,10
 
-SPR yyyy
+SPR zzzz
 11111111
 10000000
 10000000
@@ -4360,7 +4374,7 @@ NAME an-evening-stroll-plinth-label-left
 DLG an-evening-stroll-dialog
 POS 18 7,10
 
-SPR zzzz
+SPR aaaaa
 11111111
 00000001
 00000001
@@ -4373,7 +4387,7 @@ NAME an-evening-stroll-plinth-label-right
 DLG an-evening-stroll-dialog
 POS 18 8,10
 
-SPR aaaaa
+SPR bbbbb
 00000000
 00000000
 01100110
@@ -4386,7 +4400,7 @@ NAME an-evening-stroll-plinth-link
 DLG an-evening-stroll-link-dialog
 POS 18 10,10
 
-SPR bbbbb
+SPR ccccc
 11111111
 10000000
 10000000
@@ -4399,7 +4413,7 @@ NAME once-i-was-an-egg-plinth-label-left
 DLG once-i-was-an-egg-dialog
 POS 19 7,10
 
-SPR ccccc
+SPR ddddd
 11111111
 00000001
 00000001
@@ -4412,7 +4426,7 @@ NAME once-i-was-an-egg-plinth-label-right
 DLG once-i-was-an-egg-dialog
 POS 19 8,10
 
-SPR ddddd
+SPR eeeee
 00000000
 00000000
 01100110
@@ -4425,7 +4439,7 @@ NAME once-i-was-an-egg-plinth-link
 DLG once-i-was-an-egg-link-dialog
 POS 19 10,10
 
-SPR eeeee
+SPR fffff
 11111111
 10000000
 10000000
@@ -4438,7 +4452,7 @@ NAME stream-explorer-plinth-label-left
 DLG stream-explorer-dialog
 POS 20 7,10
 
-SPR fffff
+SPR ggggg
 11111111
 00000001
 00000001
@@ -4451,7 +4465,7 @@ NAME stream-explorer-plinth-label-right
 DLG stream-explorer-dialog
 POS 20 8,10
 
-SPR ggggg
+SPR hhhhh
 00000000
 00000000
 01100110
@@ -4464,7 +4478,7 @@ NAME stream-explorer-plinth-link
 DLG stream-explorer-link-dialog
 POS 20 10,10
 
-SPR hhhhh
+SPR iiiii
 11111111
 10000000
 10000000
@@ -4477,7 +4491,7 @@ NAME silverybield-foss-plinth-label-left
 DLG silverybield-foss-dialog
 POS 21 7,10
 
-SPR iiiii
+SPR jjjjj
 11111111
 00000001
 00000001
@@ -4490,7 +4504,7 @@ NAME silverybield-foss-plinth-label-right
 DLG silverybield-foss-dialog
 POS 21 8,10
 
-SPR jjjjj
+SPR kkkkk
 00000000
 00000000
 01100110
@@ -4503,7 +4517,7 @@ NAME silverybield-foss-plinth-link
 DLG silverybield-foss-link-dialog
 POS 21 10,10
 
-SPR kkkkk
+SPR lllll
 11111111
 10000000
 10000000
@@ -4516,7 +4530,7 @@ NAME breathe-in-plinth-label-left
 DLG breathe-in-dialog
 POS 22 7,10
 
-SPR lllll
+SPR mmmmm
 11111111
 00000001
 00000001
@@ -4529,7 +4543,7 @@ NAME breathe-in-plinth-label-right
 DLG breathe-in-dialog
 POS 22 8,10
 
-SPR mmmmm
+SPR nnnnn
 00000000
 00000000
 01100110
@@ -4542,7 +4556,7 @@ NAME breathe-in-plinth-link
 DLG breathe-in-link-dialog
 POS 22 10,10
 
-SPR nnnnn
+SPR ooooo
 11111111
 10000000
 10000000
@@ -4555,7 +4569,7 @@ NAME beachcombing-plinth-label-left
 DLG beachcombing-dialog
 POS 23 7,10
 
-SPR ooooo
+SPR ppppp
 11111111
 00000001
 00000001
@@ -4568,7 +4582,7 @@ NAME beachcombing-plinth-label-right
 DLG beachcombing-dialog
 POS 23 8,10
 
-SPR ppppp
+SPR qqqqq
 00000000
 00000000
 01100110
@@ -4734,6 +4748,9 @@ beachcombing by cecile richard
 
 DLG beachcombing-link-dialog
 (js "window.open('https://haraiva.itch.io/beachcombing','_blank')")
+
+DLG sign-dialog
+Welcome to b r 3, a gallery of Bitsy water. In this building is a series of plinths containing water from Bitsy games. Move into a plinth to read the name and author of the water. Move over the water to get a close-up. In the close-up view, move over the link icon to view the corresponding game.
 
 
 </script>
@@ -13021,6 +13038,8 @@ CHAR 255
 </script>
 
 
+
+
 <script>
 /**
 ☕
@@ -13390,6 +13409,7 @@ addDualDialogTag('js', executeJs);
 
 }(window));
 </script>
+
 
 </head>
 

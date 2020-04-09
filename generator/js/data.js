@@ -1,3 +1,6 @@
+const signText = "Welcome to b r 3, a gallery of Bitsy water. In this building is a series of plinths containing water from Bitsy games. Move into a plinth to read the name and author of the water. Move over the water to get a close-up. In the close-up view, move over the link icon to view the corresponding game.";
+
+
 // generate plinth positions
 let room = 27;
 let startX = 3;
@@ -49,8 +52,8 @@ b r 3
 const defaultPalette = `
 PAL 0
 NAME default-palette
-183,180,183
-70,93,213
+170,187,255
+85,85,255
 255,255,255
 `
 
@@ -336,12 +339,13 @@ const plinthCloseNECornerData = `11111111
 00000001
 00000001`
 
-const plinthRoomBackgroundData = `00000000
-00010000
-00000001
+const plinthRoomBackgroundData = `01010101
 00000000
-10000000
-00000100
+01010101
+00000000
+01010101
+00000000
+01010101
 00000000`
 
 // Temporarily here
@@ -374,6 +378,15 @@ const avatarSpriteData = `00000000
 01000010
 00111100
 00000000`;
+
+const signSpriteData = `00000000
+11111111
+10000001
+10000001
+10000001
+11111111
+00011000
+00011000`
 
 const wideViewPlinthLeftData = `11111111
 11111100
