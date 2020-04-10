@@ -56,6 +56,9 @@ Sandcastles by evee
 ![](images/breathe-in-by-claire-morley.gif)
 Breathe in by Claire Morley
 
+![](images/v-r-3-vs-b-r-3.png)
+_v r 3_ and _b r 3_ side by side
+
 ## Press
 
 - Coming soon?
