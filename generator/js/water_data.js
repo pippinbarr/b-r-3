@@ -929,7 +929,7 @@ p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
 
 
   {
-    title: "Zelda? I Hardly Knew 'Er'",
+    title: "Zelda? I Hardly Knew 'Er",
     author: "ducklingsmith",
     prefix: "zelda-i-hardly-knew-er",
     link: "https://ducklingsmith.itch.io/zelda-i-hardly-knew-er",
@@ -981,7 +981,7 @@ p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
 
 
   {
-    title: "Randy G.'s Wild n' Wacky Beach Adventure'",
+    title: "Randy G.'s Wild n' Wacky Beach Adventure",
     author: "Emma Dee",
     prefix: "randy-g",
     link: "https://emmadaues.itch.io/randyg",
@@ -1032,7 +1032,7 @@ p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
 
 
   {
-    title: "an evening stroll'",
+    title: "an evening stroll",
     author: "Laiska",
     prefix: "an-evening-stroll",
     link: "https://laiska.itch.io/an-evening-stroll",
@@ -1099,7 +1099,7 @@ p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
 
 
   {
-    title: "Once I was an Egg'",
+    title: "Once I was an Egg",
     author: "Juliette Amorati",
     prefix: "once-i-was-an-egg",
     link: "https://julietteamorati.itch.io/once-i-was-an-egg",
