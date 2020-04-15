@@ -1,4 +1,4 @@
-const signText = "Welcome to b r 3, a gallery of Bitsy water. In this building is a series of plinths containing water from Bitsy games. Move into a plinth to read the name and author of the water. Move over the water to get a close-up. In the close-up view, move over the link icon to view the corresponding game.";
+const signText = "Welcome to b r 3, a gallery of Bitsy water.";
 
 
 // generate plinth positions
