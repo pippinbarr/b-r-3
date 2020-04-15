@@ -4,7 +4,7 @@ _There are 1.8446744e+19 possible 8x8 one bit images! But only some of them look
 
 ## [Play _b r 3_](https://pippinbarr.github.io/b-r-3)
 
-![](press/images/gallery.gif)
+![](../press/images/gallery.gif)
 
 ---
 
