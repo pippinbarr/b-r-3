@@ -552,7 +552,7 @@ p,p,p,p,d,0,0,0,0,0,0,e,p,p,p,p`
 
   {
     title: "almanac of girlswampwar territory & the _girls who swim as fertilizer through the warm soil cloaking the roots of the glorious tree of eugenics (giving birth to a black hole in a walmart parking lot at 1am)",
-    author: "porpentine charity heartscape",
+    author: "porpentine charity heartscape (water by Ada Rook)",
     prefix: "almanac-of-girlswampwar-territory",
     link: "https://porpentine.itch.io/almanac",
     palette: {
