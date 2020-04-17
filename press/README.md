@@ -61,7 +61,7 @@ _v r 3_ and _b r 3_ side by side
 
 ## Press
 
-- Coming soon?
+- Natalie Clayton. [Pippin Barr returns to digital water museums with Bitsy exhibition b r 3](https://www.rockpapershotgun.com/2020/04/16/pippin-barr-returns-to-digital-water-museums-with-bitsy-exhibition-b-r-3/). Rock, Paper, Shotgun. 16 April 2020.
 
 ## Additional Links
 
