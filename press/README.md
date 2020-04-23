@@ -7,7 +7,7 @@ _There are 1.8446744e+19 possible 8x8 one bit images! But only some of them look
 ## The basics
 
 * Developer: [Pippin Barr](http://www.pippinbarr.com/)
-* Release: ...
+* Release: 15 April 2020
 * Platform: Browser (desktop and mobile)
 * Code repository: https://github.com/pippinbarr/b-r-3
 * Price: $0.00
