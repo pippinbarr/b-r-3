@@ -59,10 +59,6 @@ Breathe in by Claire Morley
 ![](images/v-r-3-vs-b-r-3.png)
 _v r 3_ and _b r 3_ side by side
 
-## Press
-
-- Natalie Clayton. [Pippin Barr returns to digital water museums with Bitsy exhibition b r 3](https://www.rockpapershotgun.com/2020/04/16/pippin-barr-returns-to-digital-water-museums-with-bitsy-exhibition-b-r-3/). Rock, Paper, Shotgun. 16 April 2020.
-
 ## Additional Links
 
 - [Process documentation of _b r 3_](https://github.com/pippinbarr/b-r-3/blob/master/process/README.md)
